@@ -1,0 +1,110 @@
+    /*-----------Import---stylesheets---------*/
+    
+    @import './normalize.scss';
+    /*----------------------------------------*/
+    /*-----------Import---fonts---------*/
+    
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    /*---------------------------------*/
+    /*------------------Variables-----------------*/
+    
+    $font-primary: 'Nunito',
+    sans-serif;
+    $font-secondary: 'Roboto',
+    sans-serif;
+    $font-third: 'Montserrat',
+    sans-serif;
+    @mixin transition {
+        transition: all ease .6s;
+    }
+    /*--------------------------------------------*/
+    
+    html,
+    body {
+        font-family: $font-primary;
+        font-size: 15px;
+    }
+    
+    .btn {
+        &.btn-wow {
+            background: #fff;
+            color: #2b8af7;
+            @include transition();
+            &:hover {
+                background: #2b8af7;
+                ;
+                color: #fff;
+            }
+        }
+    }
+    
+    //Header
+    header {
+        min-height: 500px;
+        background: url('../assets/images/bg1.jpg') no-repeat center;
+        background-size: cover;
+        .navbar-brand {
+            font: {
+                family: $font-third;
+                weight: bolder;
+                size: 2em;
+            }
+        }
+        .nav-item {
+            padding: 3px 10px;
+            margin: 0 10px;
+            @include transition();
+            &:hover,
+            &.active {
+                background-color: rgba(255, 255, 255, .3);
+                border-radius: 50px;
+            }
+            .nav-link {
+                color: #fff !important;
+            }
+        }
+        .navbar-button {
+            .nav-btn-item {
+                display: inline-block;
+                margin: 0 10px;
+            }
+            .nav-login {
+                display: grid;
+                grid-template-columns: 30px 1fr;
+                border-radius: 200px;
+                background: #fff;
+                padding: 5px;
+                font-size: 14px;
+                @include transition();
+                &:hover {
+                    background: #2b8af7;
+                    color: #fff;
+                    .i {
+                        background: #fff;
+                        color: #2b8af7;
+                    }
+                }
+            }
+            .i {
+                width: 30px;
+                height: 30px;
+                background: #2b8af7;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+            }
+            span.text {
+                margin: auto;
+                padding: 0 5px;
+            }
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .navbar-expand-lg .navbar-collapse {
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
