@@ -28,14 +28,26 @@
     }
     
     .btn {
+        @include transition();
         &.btn-wow {
             background: #fff;
             color: #2b8af7;
-            @include transition();
+            box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.151);
             &:hover {
                 background: #2b8af7;
                 ;
                 color: #fff;
+            }
+        }
+        &.btn-blind {
+            background: #ffb400;
+            color: #fff;
+            font-weight: bold;
+            display: block;
+            padding: 6px 20px;
+            border-radius: 30px;
+            &:hover {
+                background: #eba400;
             }
         }
     }
@@ -54,6 +66,9 @@
         background: #fff;
         border-radius: 5px;
         color: #666;
+        &:focus-within {
+            border-color: #ffb400;
+        }
         //Pour les champs avec icône
         &.grid {
             display: grid;
