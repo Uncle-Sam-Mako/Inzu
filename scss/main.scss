@@ -1,6 +1,7 @@
     /*-----------Import---stylesheets---------*/
     
     @import './normalize.scss';
+    @import './index.scss';
     /*----------------------------------------*/
     /*-----------Import---fonts---------*/
     
@@ -23,6 +24,7 @@
     body {
         font-family: $font-primary;
         font-size: 15px;
+        color: #666;
     }
     
     .btn {
@@ -38,11 +40,35 @@
         }
     }
     
+    //input-box
+    .input-box {
+        input {
+            border: none;
+            background: transparent;
+            width: 100%;
+        }
+        display: block;
+        margin: 5px;
+        border: 1px solid #eee;
+        padding: 10px;
+        background: #fff;
+        border-radius: 5px;
+        color: #666;
+        //Pour les champs avec icône
+        &.grid {
+            display: grid;
+            //Icône à droite
+            &.right {
+                grid-template-columns: 1fr 50px;
+            }
+        }
+    }
+    
     //Header
     header {
-        min-height: 500px;
         background: url('../assets/images/bg1.jpg') no-repeat center;
         background-size: cover;
+        position: relative;
         .navbar-brand {
             font: {
                 family: $font-third;
@@ -62,6 +88,10 @@
             .nav-link {
                 color: #fff !important;
             }
+        }
+        .navbar-toggler {
+            color: #fff !important;
+            border: none;
         }
         .navbar-button {
             .nav-btn-item {
@@ -100,11 +130,37 @@
                 padding: 0 5px;
             }
         }
+        .mobile-btn-container {
+            display: flex;
+            align-items: center;
+        }
+        .mobile-nav-btn {
+            justify-self: end;
+            a,
+            button {
+                color: #fff;
+            }
+            span {
+                margin: 0 10px;
+            }
+        }
     }
     
     @media (min-width: 992px) {
         .navbar-expand-lg .navbar-collapse {
             justify-content: space-between;
             align-items: center;
+        }
+        .invisible-lg {
+            display: none !important;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        nav {
+            background-color: rgba(255, 255, 255, 0.288);
+        }
+        .invisible-sm {
+            display: none !important;
         }
     }
