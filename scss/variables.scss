@@ -1,0 +1,20 @@
+/*-------------Variables------------------*/
+
+$font-primary: 'Nunito',
+sans-serif;
+$font-secondary: 'Roboto',
+sans-serif;
+$font-third: 'Montserrat',
+sans-serif;
+
+/*-----------------------------------------*/
+
+
+/*------------Mixins---------------------*/
+
+@mixin transition {
+    transition: all ease .6s;
+}
+
+
+/*----------------------------------------*/
