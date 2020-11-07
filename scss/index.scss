@@ -120,9 +120,33 @@ header {
     min-height: 400px;
     background: #0099ff13;
     h5{
-        color: #008cff;
+        color: #ffb400;
         text-transform: uppercase;
         font-weight: bold;
+    }
+    .advantages-item{
+        h5{
+            text-transform: initial;
+        }
+        .img {
+            position: relative;
+            display: inline-block;
+            &:after{
+                content: "";
+                display: inline-block;
+                position: absolute;
+                right: 10px;
+                top: 10%;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                background: #008cff2c;
+            }
+            svg{
+                width: 80px;
+                fill: #0073a8;
+            }
+        }
     }
 }
 .announce-banner{
