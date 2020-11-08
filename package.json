@@ -16,5 +16,8 @@
     "bugs": {
         "url": "https://github.com/Uncle-Sam-Mako/Inzu/issues"
     },
-    "homepage": "https://github.com/Uncle-Sam-Mako/Inzu#readme"
+    "homepage": "https://github.com/Uncle-Sam-Mako/Inzu#readme",
+    "dependencies": {
+        "storm-adaptive-background": "^0.3.0"
+    }
 }
