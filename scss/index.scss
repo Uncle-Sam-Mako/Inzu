@@ -136,14 +136,14 @@ header {
                 display: inline-block;
                 position: absolute;
                 right: 10px;
-                top: 10%;
+                top: 0%;
                 width: 30px;
                 height: 30px;
                 border-radius: 100%;
                 background: #008cff2c;
             }
             svg{
-                width: 80px;
+                width: 60px;
                 fill: #0073a8;
             }
         }
@@ -163,6 +163,52 @@ header {
         }
         p{
             line-height: .5em;
+        }
+    }
+}
+footer{
+    min-height: 300px;
+    background: #0099ff13;
+    border-top: 1px solid #ccc;
+    .footer-container{
+       .body{
+           display: grid;
+           grid-template-columns: repeat(3, 1fr);
+           justify-items: center;
+           .links-list{
+            .list-head{
+                margin: 15px 0;
+                font-weight: bold;
+            }
+            .link-item{
+                margin: 5px 0;
+            }
+        }
+       }
+       .feet{
+           display: flex;
+           justify-content: space-between;
+            border-top: 1px solid #ccc;
+       }
+       .social-links-list{
+           li{
+               display: inline-block;
+               margin: 0 10px;
+           }
+       }
+       
+    }
+}
+
+@media (max-width: 992px) {
+    footer{
+        .footer-container{
+           .body{
+               display: block;
+               .links-list{
+                   margin: 10px 0;
+               }
+           }
         }
     }
 }
