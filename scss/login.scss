@@ -1,0 +1,49 @@
+//For login.html
+
+/*-----------Import---stylesheets---------*/
+    
+@import './variables.scss';
+
+/*----------------------------------------*/
+
+
+.login-form-container{
+    padding: 30px 0 0 0;
+    h5{
+        font-weight: bold;
+    }
+    .login-form{
+        border: 1px solid #eee;
+        border-radius: 10px;
+        padding: 20px 35px;
+    }
+    .create-account{
+        a{
+            text-decoration: underline;
+        }
+    }
+}
+
+.forget-password{
+    a{
+        text-decoration: underline;
+    }
+}
+
+.connection-options{
+    .btn{
+        border: 2px solid #c9c9c9;
+        @include transition();
+        color: #666;
+        img{
+            width: 17px;
+        }
+        i{
+            color: #3b5998;
+        }
+        &:hover{
+            border-color: #0a91df;
+            background: #008cff1a;
+        }
+    }
+}
