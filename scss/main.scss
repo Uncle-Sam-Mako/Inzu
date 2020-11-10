@@ -183,6 +183,17 @@
             .nav-item{
                 margin: 5px 0 !important;
             }
+            .navbar-toggler{
+                .text{
+                    font-size: 15px;
+                }
+            }
+            &.navbar-light{
+                color : #666;
+            }
+            .mobile-btn-container button{
+                color: #666 !important;
+            }
         }
         .invisible-sm {
             display: none !important;
