@@ -16,6 +16,9 @@
         font-size: 15px;
         color: #666;
     }
+    body.marged{
+        padding-top: 80px;
+    }
     .full-w{
         width: 100%;
     }
@@ -81,6 +84,7 @@
     header {
         nav{
             &.navbar-light{
+                box-shadow: 0px 0px 10px #eee ;
                 .nav-link{
                     color: #666 !important;
                 }
