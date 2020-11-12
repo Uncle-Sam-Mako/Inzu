@@ -495,8 +495,8 @@
                 </ul>
                 <ul class="links-list">
                     <li class="list-head">Compte</li>
-                    <li class="link-item"><a href="#">Se connecter</a></li>
-                    <li class="link-item"><a href="">Créer un compte</a></li>
+                    <li class="link-item"><a href="./views/login.html">Se connecter</a></li>
+                    <li class="link-item"><a href="./views/sign_up.html">Créer un compte</a></li>
                     <li class="link-item"><a href="">Mon compte</a></li>
                     <li class="link-item"><a href="">Supprimer un compte</a></li>
                 </ul>
@@ -520,17 +520,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="./js/carousel.js"></script>
     <script>
-       $(document).ready(function(){
-            $.adaptiveBackground.run()
-        });
         let a = $(".more-info-shower");
         $('.link').click(function(e){
             e.preventDefault();
         })
-        a.click(function(){
-            let b = $(".more-info");
-            a.next('.more-info').show(5000);
-        });
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
