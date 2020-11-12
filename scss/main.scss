@@ -4,6 +4,7 @@
     @import './normalize.scss';
     @import './index.scss';
     @import './login.scss';
+    @import './contact.scss';
     /*----------------------------------------*/
     /*-----------Import---fonts---------*/
     
@@ -49,7 +50,7 @@
     
     //input-box
     .input-box {
-        input {
+        input, textarea {
             border: none;
             background: transparent;
             width: 100%;
@@ -64,6 +65,7 @@
         color: #666;
         &:focus-within {
             border-color: #ffb400;
+            box-shadow: 0px 0px 5px #eee;
         }
         //Pour les champs avec icône
         &.grid {

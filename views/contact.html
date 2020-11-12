@@ -31,13 +31,13 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="#">Trouver une maison</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">A propos</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                     <li class="nav-item invisible-lg">
@@ -58,3 +58,93 @@
             </div>
         </nav>
     </header>
+    <section class="contact-page container my-5">
+        <div class="contact-page-content row">
+            <div class="col-lg-6">
+                <h4 class="font-weight-bold head-title">Contactez-nous</h4>
+                <div class="contact-text my-3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo autem reprehenderit nulla, aperiam incidunt enim explicabo ut ipsum, iste iusto dolores exercitationem eum unde magnam odio necessitatibus dicta nam esse?</p>
+                    <span>
+                        <h5 class="font-weight-bold">Assistance et conseils</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit a nesciunt molestias illo maiores, placeat voluptate, sunt velit iusto nostrum repellendus eius repudiandae molestiae corporis asperiores labore consectetur saepe delectus.
+                        </p>
+                    </span>
+                    <span>
+                        <h5 class="font-weight-bold">Suggestions</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit a nesciunt molestias illo maiores, placeat voluptate, sunt velit iusto nostrum repellendus eius repudiandae molestiae corporis asperiores labore consectetur saepe delectus.
+                        </p>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-6 contact-form-container p-3">
+                <form action="#">
+                    <span class="input-box">
+                        <input type="email" placeholder="Email">
+                    </span>
+                    <span class="input-box">
+                        <input type="text" placeholder="Objet">
+                    </span>
+                    <span class="input-box">
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </span>
+                    <input class="btn btn-blind ml-auto mr-4 my-3" type="submit">
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer-container container">
+            <div class="body py-5">
+                <ul class="links-list">
+                    <li class="list-head">A propos</li>
+                    <li class="link-item"><a href="">Qui sommes-nous</a></li>
+                    <li class="link-item"><a href="">Fonctionnement du site</a></li>
+                    <li class="link-item"><a href="">Confidentialité</a></li>
+                    <li class="link-item"><a href="">Conditions générales</a></li>
+                </ul>
+                <ul class="links-list">
+                    <li class="list-head">Inzu</li>
+                    <li class="link-item"><a href="#">Accueil</a></li>
+                    <li class="link-item"><a href="">Trouver une maison</a></li>
+                    <li class="link-item"><a href="">Déposer une annonce</a></li>
+                    <li class="link-item"><a href="">Contact</a></li>
+                </ul>
+                <ul class="links-list">
+                    <li class="list-head">Compte</li>
+                    <li class="link-item"><a href="./views/login.html">Se connecter</a></li>
+                    <li class="link-item"><a href="./views/sign_up.html">Créer un compte</a></li>
+                    <li class="link-item"><a href="">Mon compte</a></li>
+                    <li class="link-item"><a href="">Supprimer un compte</a></li>
+                </ul>
+            </div>
+            <div class="feet py-3">
+                <div>
+                    <p>2020 Inzu - Tous droits reservés</p>
+                </div>
+                <div>
+                    <ul class="social-links-list">
+                        <li class="link-item"><a href=""><i class="fab fa-facebook"></i></a></li>
+                        <li class="link-item"><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li class="link-item"><a href=""><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/47fc11e9b5.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script>
+        let a = $(".more-info-shower");
+        $('.link').click(function(e){
+            e.preventDefault();
+        })
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
