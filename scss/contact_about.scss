@@ -1,0 +1,30 @@
+//For contact.html & about.html
+
+.contact-page-content, .about-page-content{
+    .head-title{
+        background: #ffb400;
+        color: #fff;
+        padding: 7px 10px;
+        border-radius: 5px;
+    }
+}
+.about-page-content{
+    .about-links-list{
+        margin-right: 20px;
+        display: block;
+        .nav-item{
+            margin: 10px;
+        }
+        .nav-link{
+            border-radius: 5px;
+            background: transparent;
+            @include transition();
+            &:hover, &.active{
+                background: #eee;
+            }
+            a{
+                display: block;
+            }
+        }
+    }
+}

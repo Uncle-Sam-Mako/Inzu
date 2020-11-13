@@ -4,7 +4,7 @@
     @import './normalize.scss';
     @import './index.scss';
     @import './login.scss';
-    @import './contact.scss';
+    @import './contact_about.scss';
     /*----------------------------------------*/
     /*-----------Import---fonts---------*/
     
@@ -16,6 +16,7 @@
         font-family: $font-primary;
         font-size: 15px;
         color: #666;
+        background: #fafafa;
     }
     body.marged{
         padding-top: 80px;
