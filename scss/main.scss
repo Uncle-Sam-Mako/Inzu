@@ -16,13 +16,16 @@
         font-family: $font-primary;
         font-size: 15px;
         color: #666;
-        background: #fafafa;
     }
     body.marged{
         padding-top: 80px;
+        background: #fafafa;
     }
     .full-w{
         width: 100%;
+    }
+    .full-h{
+        height: 100%;
     }
     .btn {
         @include transition();
