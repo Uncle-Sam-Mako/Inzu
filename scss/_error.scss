@@ -5,7 +5,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: $font-secondary;
     .error-text{
         p{
             &:first-child{
@@ -22,6 +21,7 @@
         font:{
             size: 3.5em;
             weight: bold;
+            family: $font-secondary;
         }
         
         line-height: .85em;
