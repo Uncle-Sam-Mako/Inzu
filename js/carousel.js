@@ -41,7 +41,8 @@ document.addEventListener( 'DOMContentLoaded', function () {
     let houseSlider_1 = document.getElementsByClassName("house-image-slider");
     for(let i=0; i<houseSlider_1.length; i++){
         new Splide( houseSlider_1[i], {
-            arrows : false,
+            arrows : true,
+            pagination: true,
             type : 'fade'
         } ).mount();
     }

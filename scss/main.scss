@@ -6,6 +6,7 @@
     @import './login.scss';
     @import './contact_about.scss';
     @import './error';
+    @import './house';
     /*----------------------------------------*/
     /*-----------Import---fonts---------*/
     
@@ -59,7 +60,18 @@
             }
         }
     }
-    
+    //SplideJs
+
+    .splide__arrow{
+        background: #fff;
+        opacity: 1;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.527);
+        svg{
+            width: .9em;
+            height: 9em;
+        }
+    }
+     
     //input-box
     .input-box {
         input, textarea {
