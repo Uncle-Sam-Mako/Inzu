@@ -26,3 +26,8 @@
         line-height: .85em;
     }
 }
+@media (max-width: 768px) {
+    .error-text{
+        text-align: center;
+    }
+}
