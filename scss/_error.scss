@@ -1,0 +1,28 @@
+//For error pages
+@import './variables';
+
+.error-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .error-text{
+        p{
+            &:first-child{
+                font-weight: bold;
+                font-size: 2em;
+                color: rgb(161, 161, 161);
+            }
+            &:last-child{
+                color: #666;
+            }
+        }
+    }
+    .error-title{
+        font:{
+            size: 5em;
+            weight: bold;
+        }
+        
+        line-height: .85em;
+    }
+}
