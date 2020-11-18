@@ -15,9 +15,20 @@
     
     html,
     body {
-        font-family: $font-primary;
+        font-family: $font-secondary;
         font-size: 15px;
         color: #666;
+    }
+    textarea, html{
+        &::-webkit-scrollbar{
+            width: 10px;
+            border-radius: 10px;
+            background-color: #eee; 
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #aaa; 
+            border-radius: 10px;
+        }
     }
     body.marged{
         padding-top: 80px;
