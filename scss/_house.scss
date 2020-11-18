@@ -1,3 +1,11 @@
 //For house.html
 
 @import './variables';
+
+.house-page{
+    #house-picture-slider{
+        img{
+            border-radius: 20px;
+        }
+    }
+}

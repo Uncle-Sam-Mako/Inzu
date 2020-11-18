@@ -63,7 +63,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <h5>Location villa - Kinshasa</h5>
-                    <div id="image-slider" class="splide">
+                    <div id="house-picture-slider" class="splide">
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
@@ -79,6 +79,19 @@
                         </div>
                     </div>
                     
+                </div>
+                <div class="col-lg-4">
+                    <div class="location-box">
+                        <h5 class="head">Contacter la proprièté</h5>
+                        <span>
+                            <p class="label">Agence</p>
+                            <p>Agence Immo KInshasa</p>
+                        </span>
+                        <span>
+                            <p class="label">Téléphone</p>
+                            <p>+243 979 534 252</p>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -129,7 +142,9 @@
     <script src="./js/carousel.js"></script>
     <script>
         document.addEventListener( 'DOMContentLoaded', function () {
-	new Splide( '#image-slider' ).mount();
+	    new Splide( '#house-picture-slider', {
+            
+        }).mount();
 } );
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
