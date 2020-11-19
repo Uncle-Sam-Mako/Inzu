@@ -8,10 +8,15 @@
             border-radius: 20px;
         }
     }
-    .location-box{
+    .box{
         background: #fff;
         box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.068);
         border-radius: 20px;
+        padding: 15px 20px;
+        margin: 10px;
+        &.price-box{
+            background: #f6fbfd;
+        }
         .info-box{
             display: block;
             margin: 10px 0;
@@ -23,6 +28,22 @@
         }
         .input-box{
             margin: 10px 0;
+        }
+        .house-price{
+            color: rgb(0, 158, 250);
+            line-height: .5;
+            font:{
+                size: 2.3em;
+                weight: bold;
+            }
+        }
+    }
+    .main-section{
+        .house-title{
+            font-weight: bold;
+        }
+        .house-sub-title{
+            margin-top: -1em;
         }
     }
 }
