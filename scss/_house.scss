@@ -57,11 +57,11 @@
                 font-weight: 700;
                 margin: 0 10px 0 0;
                 display: inline-block;
-                min-width: 200px;
+                //min-width: 200px;
             }
         }
         .info-item{
-            margin: 10px;
+            margin: 15px 0;
         }
         .title{
             font-weight: 700;
@@ -73,6 +73,27 @@
                 width: 50%;
                 margin-top: 10px;
             }
+        }
+    }
+    .rooms{
+        .infos-list{
+            display: flex;
+            flex-wrap: wrap;
+            .info-item{
+                flex-basis: 200px;
+            }
+        }
+    }
+    .other_details{
+        ul li{
+            &::before{
+                content: '';
+                display: inline-block;
+                height: 15px;
+                width: 15px;
+                line-height: 1.5;
+                background-image: url('../assets/icons/Checkmark.svg');
+             }
         }
     }
 }
