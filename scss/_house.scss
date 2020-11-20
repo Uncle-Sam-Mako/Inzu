@@ -46,4 +46,33 @@
             margin-top: -1em;
         }
     }
+    .house-infos{
+        .infos-block{
+            margin: 15px 0;
+            .content{
+                display: block;
+                padding: 10px 0;
+            }
+            .label{
+                font-weight: 700;
+                margin: 0 10px 0 0;
+                display: inline-block;
+                min-width: 200px;
+            }
+        }
+        .info-item{
+            margin: 10px;
+        }
+        .title{
+            font-weight: 700;
+            width: max-content;
+            &::after{
+                content: "";
+                display: block;
+                border-top: 2px solid #ccc;
+                width: 50%;
+                margin-top: 10px;
+            }
+        }
+    }
 }
