@@ -20,6 +20,7 @@
         border: 1px solid #eee;
         border-radius: 10px;
         padding: 20px 35px;
+        box-shadow: 0px 0px 20px #f3f3f3;
     }
     .licence-warning{
         font-size: small;
@@ -32,7 +33,7 @@
     }
 }
 
-.connection-options{
+.connection-options-1{
     .btn{
         border: 2px solid #c9c9c9;
         @include transition();
@@ -47,5 +48,10 @@
             border-color: #0a91df;
             background: #008cff1a;
         }
+    }
+}
+.connection-options-2{
+    .item{
+        margin: 0 10px; 
     }
 }
