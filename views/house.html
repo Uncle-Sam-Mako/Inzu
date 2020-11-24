@@ -527,7 +527,7 @@
     <script src="../splide-2.4.12/dist/js/splide.min.js"></script>
     <script src="../js/carousel.js"></script>
     <script>
-        $(function() {
+        const semiFixed = $(function() {
             var top = $('#side-box').offset().top - parseFloat($('#side-box').css('marginTop').replace(/auto/, 0));
             var footTop = $('#near-houses').offset().top - parseFloat($('#near-houses').css('marginTop').replace(/auto/, 0));
             var maxY = footTop - $('#side-box').outerHeight();
