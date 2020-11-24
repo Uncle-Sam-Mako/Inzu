@@ -1,8 +1,7 @@
 //For all sliders
 
-//index.html
-
-document.addEventListener( 'DOMContentLoaded', function () {
+//Slider pour les villes (index.html)
+let townSlider = $(function(){
     new Splide('#town-slider', {
         perPage: 4,
         cover: true,
@@ -19,8 +18,11 @@ document.addEventListener( 'DOMContentLoaded', function () {
             }
         }
     }).mount();
+});
 
-    new Splide('#last-houses-slider', {
+//Slider pour les maisons 
+let houseSlider = $(function(){
+    new Splide('#house-slider', {
         perPage: 4,
         cover: true,
         arrows: false,
@@ -37,13 +39,23 @@ document.addEventListener( 'DOMContentLoaded', function () {
         }
     }).mount();
 });
-document.addEventListener( 'DOMContentLoaded', function () {
-    let houseSlider_1 = document.getElementsByClassName("house-image-slider");
-    for(let i=0; i<houseSlider_1.length; i++){
-        new Splide( houseSlider_1[i], {
+
+//Slider pour galerie photos sur chaque houseSlider
+let housePhotos_small = $(function(){
+    let housePhotos_small = $(".house-photos-slider");
+    for(let i=0; i<housePhotos_small.length; i++){
+        new Splide( housePhotos_small[i], {
             arrows : true,
             pagination: true,
             type : 'fade'
         } ).mount();
     }
 });
+
+//Slider pour grande galerie photos dans house.html
+let = housePhotos_main = $(function(){
+    new Splide( '#house-picture-slider', {
+        type : 'fade'
+    }).mount();
+});
+

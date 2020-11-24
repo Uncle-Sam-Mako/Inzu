@@ -73,7 +73,7 @@
                                 <a href="./under_building.html">Kinshasa</a>
                             </p>
                         </div>
-                        <div id="house-picture-slider" class="splide">
+                        <div id="house-picture-slider" class="splide house-photos-slider">
                             <div class="splide__track">
                                 <ul class="splide__list">
                                     <li class="splide__slide">
@@ -237,12 +237,12 @@
         </div>
         <div id="near-houses"class="infos-block my-5 px-lg-5">
             <h5 class="title"><i class="fa fa-map-marker"></i> Les maisons à proximité</h5>
-            <div id="house-near-slider" class="house-slider splide mt-5">
+            <div id="house-slider" class="house-slider splide mt-5">
                 <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide house-item">
                             <a href="#" class="link">
-                                <div class="house-image-slider splide">
+                                <div class="house-photos-slider splide">
                                     <div class="splide__track">
                                         <ul class="splide__list">
                                             <li class="splide__slide">
@@ -301,7 +301,7 @@
                         </li>
                         <li class="splide__slide house-item">
                             <a href="#" class="link">
-                                <div class="house-image-slider splide">
+                                <div class="house-photos-slider splide">
                                     <div class="splide__track">
                                         <ul class="splide__list">
                                             <li class="splide__slide">
@@ -360,7 +360,7 @@
                         </li>
                         <li class="splide__slide house-item">
                             <a href="#" class="link">
-                                <div class="house-image-slider splide">
+                                <div class="house-photos-slider splide">
                                     <div class="splide__track">
                                         <ul class="splide__list">
                                             <li class="splide__slide">
@@ -419,7 +419,7 @@
                         </li>
                         <li class="splide__slide house-item">
                             <a href="#" class="link">
-                                <div class="house-image-slider splide">
+                                <div class="house-photos-slider splide">
                                     <div class="splide__track">
                                         <ul class="splide__list">
                                             <li class="splide__slide">
@@ -526,52 +526,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="../splide-2.4.12/dist/js/splide.min.js"></script>
     <script src="../js/carousel.js"></script>
-    <script>
-        const semiFixed = $(function() {
-            var top = $('#side-box').offset().top - parseFloat($('#side-box').css('marginTop').replace(/auto/, 0));
-            var footTop = $('#near-houses').offset().top - parseFloat($('#near-houses').css('marginTop').replace(/auto/, 0));
-            var maxY = footTop - $('#side-box').outerHeight();
-            $(window).scroll(function(evt) {
-                var y = $(this).scrollTop();
-                if (y > top) {
-                    if (y < maxY) {
-                        $('#side-box').addClass('fixed').removeAttr('style');
-                    } else {
-                        $('#side-box').removeClass('fixed').css({
-                        position: 'absolute',
-                        top: (maxY - top) + 'px'
-                        });
-                    }
-                } else {
-                    $('#side-box').removeClass('fixed');
-                }
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener( 'DOMContentLoaded', function () {
-            new Splide( '#house-picture-slider', {
-                type : 'fade'
-            }).mount();
-        } );
-        new Splide('#house-near-slider', {
-            perPage: 4,
-            cover: true,
-            arrows: false,
-            pagination: false,
-            lazyLoad: 'nearby',
-            breakpoints: {
-                height: '8rem',
-                767: {
-                    perPage: 1,
-                },
-                992: {
-                    perPage: 2,
-                }
-            }
-        }).mount();
-    </script>
+    <script src="../js/main.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
