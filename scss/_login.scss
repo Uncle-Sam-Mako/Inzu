@@ -25,6 +25,19 @@
     .licence-warning{
         font-size: small;
     }
+    #loginPhoneEmail{
+        .phone-input{
+            display: none;
+        }
+        &.mode-phone{
+            .email-input{
+                display: none;
+            }
+            .phone-input{
+                display: block;
+            }
+        }
+    }
 }
 
 .forget-password{

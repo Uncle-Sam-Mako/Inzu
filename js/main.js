@@ -20,3 +20,20 @@ const semiFixed = $(function() {
         }
     });
 });
+
+//Shoz and mask password
+const showPass = function(){
+    let input = $('#password');
+    input.attr("type", "text");
+};
+
+//Change login option : Email or Phone
+const loginOptions = $(function() {
+    let $radios = $('.connection-options-2 input[name="option"]');
+    $radios.change(function() {
+        let $checked = $radios.filter(function() {
+            return $(this).prop('checked');
+        });
+        $checked.val()=="phone" ?  $("#loginPhoneEmail").addClass("mode-phone") : $("#loginPhoneEmail").removeClass("mode-phone");
+    });
+});
