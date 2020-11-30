@@ -86,11 +86,19 @@
 
     .splide__arrow{
         background: #fff;
-        opacity: 1;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.527);
+        opacity: 0;
+        transition: 0.6s;
         svg{
             width: .9em;
             height: 9em;
+        }
+    }
+    .splide__slide{
+        &:hover{
+            .splide__arrow{
+                opacity: 1;
+            }
         }
     }
      
