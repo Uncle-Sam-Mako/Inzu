@@ -1,0 +1,23 @@
+//For find_house.html
+@import './variables';
+
+.filter-nav{
+    width: 100%;
+    min-height: 60px;
+    background: #f3f3f3;
+    display: flex;
+    align-items: center;
+    .filter-list{
+        li{
+            display: inline-block;
+            input{
+                margin: 5px;
+                text-align: center;
+            }
+        }
+    }
+    .filter-container{
+        display: grid;
+        grid-template-columns: 1fr max-content;
+    }
+}
