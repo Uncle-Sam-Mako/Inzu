@@ -95,12 +95,11 @@
             height: 9em;
         }
     }
-    .splide__slide{
-        &:hover{
+    .splide:hover{
             .splide__arrow{
                 opacity: 1;
             }
-        }
+        
     }
      
     //input-box

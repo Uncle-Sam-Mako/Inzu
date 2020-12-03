@@ -48,7 +48,9 @@
     .houses-side{
         overflow-y: visible;
         .houses-container{
-            
+            .house-item{
+                margin: 5px auto;
+            }
         }
     }
 }
