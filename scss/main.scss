@@ -19,6 +19,7 @@
         font-family: $font-primary;
         font-size: 15px;
         color: #666;
+        height: 100%;
     }
     a,
     a:hover,
@@ -42,9 +43,14 @@
             border-radius: 10px;
         }
     }
-    body.marged{
-        padding-top: 80px;
-        background: #fafafa;
+    body{
+        &.marged{
+            padding-top: 80px;
+            background: #fafafa;
+        }
+        &.no-scroll{
+            overflow: hidden;
+        }
     }
     .full-w{
         width: 100%;
@@ -304,6 +310,7 @@
                 display: block;
                 padding: 10px 0;
                 border-bottom: 1px solid #eee;
+                font-size: .9em;
                 ul {
                     display: flex;
                     justify-content: space-between;

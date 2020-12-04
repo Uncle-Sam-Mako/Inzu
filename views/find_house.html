@@ -13,10 +13,6 @@
     <link rel="stylesheet" href="../bootstrap-4.5.3-dist/css/bootstrap.min.css">
 </head>
 <style>
-    body{
-        height: 100%;
-        overflow-y: hidden;
-    }
 </style>
 <body class="marged">
     <header>
@@ -63,282 +59,524 @@
             </div>
         </nav>
     </header>
-    <section class="filter-section">
-        <div class="filter-nav container-fluid" style="margin-top: -4px;">
-            <span class="input-box search-town">
-                <input type="text" placeholder="Ville, Région">
-                
-            </span>
-            <div class="full-w">
-                <div class="filter-container">
-                    <ul class="filter-list">
-                        <li class="filter-item house-type-filter">
-                            <input type="text" placeholder="Type" id="type-filter" name="type-filter">
-                        </li>
-                        <li class="filter-item house-price-filter">
-                            <input type="text" placeholder="Prix" id="price-filter" name="price-filter">
-                        </li>
-                        <li class="filter-item house-area-filter">
-                            <input type="text" placeholder="Surface">
-                        </li>
-                        <li class="filter-item house-beds-filter">
-                            <input type="text" placeholder="Chambres">
-                        </li>
-                    </ul>
-                    <div class="action-btn">
-                        <button class="btn btn-wow reverse">Plus</button>
-                        <button class="btn btn-wow reverse"><i class="fa fa-search"></i> Trouver</button>
+    <section class="find_house_main_section">
+        <div class="filter-section">
+            <div class="filter-nav container-fluid" style="margin-top: -4px;">
+                <span class="input-box search-town">
+                    <input type="text" placeholder="Ville, Région">
+                </span>
+                <div class="full-w">
+                    <div class="filter-container">
+                        <ul class="filter-list">
+                            <li class="filter-item house-type-filter">
+                                <input type="text" placeholder="Type" id="type-filter" name="type-filter">
+                            </li>
+                            <li class="filter-item house-price-filter">
+                                <input type="text" placeholder="Prix" id="price-filter" name="price-filter">
+                            </li>
+                            <li class="filter-item house-area-filter">
+                                <input type="text" placeholder="Surface">
+                            </li>
+                            <li class="filter-item house-beds-filter">
+                                <input type="text" placeholder="Chambres">
+                            </li>
+                        </ul>
+                        <div class="action-btn">
+                            <button class="btn btn-wow reverse">Plus</button>
+                            <button class="btn btn-wow reverse"><i class="fa fa-search"></i> Trouver</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="find-section py-3">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-5 map-side">
-                    <div class="map-container">
-                        
-                    </div>
-                </div>
-                <div class="col-lg-7 houses-side">
-                    <div class="houses-container px-4 row">
-                        <li class="col-lg-6 house-item">
-                            <a href="#" class="link">
-                                <div class="house-photos-slider splide">
-                                    <div class="splide__track">
-                                        <ul class="splide__list">
-                                            <li class="splide__slide">
-                                                <img src="../assets/images/img1.jpg">
-                                            </li>
-                                            <li class="splide__slide">
-                                                <img src="../assets/images/img2.jpg">
-                                            </li>
-                                            <li class="splide__slide">
-                                                <img src="../assets/images/img3.jpg">
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item-info">
-                                    <div>
-                                        <h6 class="house-title">
-                                            <span class="town">Kinshasa</span>
-                                            <span class="type">Villa</span>
-                                        </h6>
-                                        <span class="short-info">
-                                            <ul>
-                                                <li class="room-nb">
-                                                    <i class="fa fa-bed"></i>
-                                                    <span>4chs</span>
+        <div class="find-section py-3">
+            <div class="container">
+                <div class="">
+                   <div class="view-mode py-3 mx">
+                        <span class="mx-2">
+                            <input type="radio" name="view-mode" id="list-view" class="radio-wow">
+                            <label for="list-view">Vue liste</label>
+                        </span>
+                        <span class="mx-2">
+                            <input type="radio" name="view-mode" id="map-view" class="radio-wow">
+                            <label for="map-view">Vue carte</label>
+                        </span>
+                   </div>
+                    <div class="houses-side">
+                        <div class="houses-container row">
+                            <li class="col-lg-3 house-item">
+                                <a href="#" class="link">
+                                    <div class="house-photos-slider splide">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img1.jpg">
                                                 </li>
-                                                <li class="bath-nb">
-                                                    <i class="fa fa-bath"></i>
-                                                    <span>2sdb</span>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img2.jpg">
                                                 </li>
-                                                <li class="feet">
-                                                    <i class="fa fa-vector-square"></i>
-                                                    <span>1455m<sup>2</sup></span>
-                                                </li>
-                                                <li>
-                                                 <button class="more-info-shower fa fa-chevron-down"></button>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img3.jpg">
                                                 </li>
                                             </ul>
-                                        </span>
-                                        <span class="more-info" style="display: none;">
-                                            <ul>
-                                                <li class="d-inline-block mr-2">Piscine</li>
-                                                <li class="d-inline-block mr-2">Jardin</li>
-                                                <li class="d-inline-block mr-2">Cheminée</li>
-                                                <li class="d-inline-block mr-2">Garage</li>
-                                                <li class="d-inline-block mr-2">Au bors de l'eau</li>
-                                                <li class="d-inline-block mr-2">Jardin</li>
-                                                <li class="d-inline-block mr-2">Cheminée</li>
-                                                <li class="d-inline-block mr-2">Garage</li>
-                                            </ul>
-                                        </span>
+                                        </div>
                                     </div>
-                                    <span id="price" class="price ml-auto">340$ <sub>/mois</sub> </span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-6 house-item">
-                            <a href="#" class="link">
-                                <div class="house-photos-slider splide">
-                                    <div class="splide__track">
-                                        <ul class="splide__list">
-                                            <li class="splide__slide">
-                                                <img src="../assets/images/img1.jpg">
-                                            </li>
-                                            <li class="splide__slide">
-                                                <img src="../assets/images/img2.jpg">
-                                            </li>
-                                            <li class="splide__slide">
-                                                <img src="../assets/images/img3.jpg">
-                                            </li>
-                                        </ul>
+                                    <div class="item-info">
+                                        <div>
+                                            <h6 class="house-title">
+                                                <span class="town">Kinshasa</span>
+                                                <span class="type">Villa</span>
+                                            </h6>
+                                            <span class="short-info">
+                                                <ul>
+                                                    <li class="room-nb">
+                                                        <i class="fa fa-bed"></i>
+                                                        <span>4chs</span>
+                                                    </li>
+                                                    <li class="bath-nb">
+                                                        <i class="fa fa-bath"></i>
+                                                        <span>2sdb</span>
+                                                    </li>
+                                                    <li class="feet">
+                                                        <i class="fa fa-vector-square"></i>
+                                                        <span>1455m<sup>2</sup></span>
+                                                    </li>
+                                                    <li>
+                                                     <button class="more-info-shower fa fa-chevron-down"></button>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                            <span class="more-info" style="display: none;">
+                                                <ul>
+                                                    <li class="d-inline-block mr-2">Piscine</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                    <li class="d-inline-block mr-2">Au bors de l'eau</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                </ul>
+                                            </span>
+                                        </div>
+                                        <span id="price" class="price ml-auto">340$ <sub>/mois</sub> </span>
                                     </div>
-                                </div>
-                                <div class="item-info">
-                                    <div>
-                                        <h6 class="house-title">
-                                            <span class="town">Kinshasa</span>
-                                            <span class="type">Villa</span>
-                                        </h6>
-                                        <span class="short-info">
-                                            <ul>
-                                                <li class="room-nb">
-                                                    <i class="fa fa-bed"></i>
-                                                    <span>4chs</span>
+                                </a>
+                            </li>
+                            <li class="col-lg-3 house-item">
+                                <a href="#" class="link">
+                                    <div class="house-photos-slider splide">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img1.jpg">
                                                 </li>
-                                                <li class="bath-nb">
-                                                    <i class="fa fa-bath"></i>
-                                                    <span>2sdb</span>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img2.jpg">
                                                 </li>
-                                                <li class="feet">
-                                                    <i class="fa fa-vector-square"></i>
-                                                    <span>1455m<sup>2</sup></span>
-                                                </li>
-                                                <li>
-                                                 <button class="more-info-shower fa fa-chevron-down"></button>
-                                                </li>
-                                            </ul>
-                                        </span>
-                                        <span class="more-info" style="display: none;">
-                                            <ul>
-                                                <li class="d-inline-block mr-2">Piscine</li>
-                                                <li class="d-inline-block mr-2">Jardin</li>
-                                                <li class="d-inline-block mr-2">Cheminée</li>
-                                                <li class="d-inline-block mr-2">Garage</li>
-                                                <li class="d-inline-block mr-2">Au bors de l'eau</li>
-                                                <li class="d-inline-block mr-2">Jardin</li>
-                                                <li class="d-inline-block mr-2">Cheminée</li>
-                                                <li class="d-inline-block mr-2">Garage</li>
-                                            </ul>
-                                        </span>
-                                    </div>
-                                    <span id="price" class="price ml-auto">340$ <sub>/mois</sub> </span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-6 house-item">
-                            <a href="#" class="link">
-                                <div class="house-photos-slider splide">
-                                    <div class="splide__track">
-                                        <ul class="splide__list">
-                                            <li class="splide__slide">
-                                                <img src="../assets/images/img1.jpg">
-                                            </li>
-                                            <li class="splide__slide">
-                                                <img src="../assets/images/img2.jpg">
-                                            </li>
-                                            <li class="splide__slide">
-                                                <img src="../assets/images/img3.jpg">
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item-info">
-                                    <div>
-                                        <h6 class="house-title">
-                                            <span class="town">Kinshasa</span>
-                                            <span class="type">Villa</span>
-                                        </h6>
-                                        <span class="short-info">
-                                            <ul>
-                                                <li class="room-nb">
-                                                    <i class="fa fa-bed"></i>
-                                                    <span>4chs</span>
-                                                </li>
-                                                <li class="bath-nb">
-                                                    <i class="fa fa-bath"></i>
-                                                    <span>2sdb</span>
-                                                </li>
-                                                <li class="feet">
-                                                    <i class="fa fa-vector-square"></i>
-                                                    <span>1455m<sup>2</sup></span>
-                                                </li>
-                                                <li>
-                                                 <button class="more-info-shower fa fa-chevron-down"></button>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img3.jpg">
                                                 </li>
                                             </ul>
-                                        </span>
-                                        <span class="more-info" style="display: none;">
-                                            <ul>
-                                                <li class="d-inline-block mr-2">Piscine</li>
-                                                <li class="d-inline-block mr-2">Jardin</li>
-                                                <li class="d-inline-block mr-2">Cheminée</li>
-                                                <li class="d-inline-block mr-2">Garage</li>
-                                                <li class="d-inline-block mr-2">Au bors de l'eau</li>
-                                                <li class="d-inline-block mr-2">Jardin</li>
-                                                <li class="d-inline-block mr-2">Cheminée</li>
-                                                <li class="d-inline-block mr-2">Garage</li>
-                                            </ul>
-                                        </span>
+                                        </div>
                                     </div>
-                                    <span id="price" class="price ml-auto">340$ <sub>/mois</sub> </span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-6 house-item">
-                            <a href="#" class="link">
-                                <div class="house-photos-slider splide">
-                                    <div class="splide__track">
-                                        <ul class="splide__list">
-                                            <li class="splide__slide">
-                                                <img src="../assets/images/img1.jpg">
-                                            </li>
-                                            <li class="splide__slide">
-                                                <img src="../assets/images/img2.jpg">
-                                            </li>
-                                            <li class="splide__slide">
-                                                <img src="../assets/images/img3.jpg">
-                                            </li>
-                                        </ul>
+                                    <div class="item-info">
+                                        <div>
+                                            <h6 class="house-title">
+                                                <span class="town">Kinshasa</span>
+                                                <span class="type">Villa</span>
+                                            </h6>
+                                            <span class="short-info">
+                                                <ul>
+                                                    <li class="room-nb">
+                                                        <i class="fa fa-bed"></i>
+                                                        <span>4chs</span>
+                                                    </li>
+                                                    <li class="bath-nb">
+                                                        <i class="fa fa-bath"></i>
+                                                        <span>2sdb</span>
+                                                    </li>
+                                                    <li class="feet">
+                                                        <i class="fa fa-vector-square"></i>
+                                                        <span>1455m<sup>2</sup></span>
+                                                    </li>
+                                                    <li>
+                                                     <button class="more-info-shower fa fa-chevron-down"></button>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                            <span class="more-info" style="display: none;">
+                                                <ul>
+                                                    <li class="d-inline-block mr-2">Piscine</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                    <li class="d-inline-block mr-2">Au bors de l'eau</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                </ul>
+                                            </span>
+                                        </div>
+                                        <span id="price" class="price ml-auto">340$ <sub>/mois</sub> </span>
                                     </div>
-                                </div>
-                                <div class="item-info">
-                                    <div>
-                                        <h6 class="house-title">
-                                            <span class="town">Kinshasa</span>
-                                            <span class="type">Villa</span>
-                                        </h6>
-                                        <span class="short-info">
-                                            <ul>
-                                                <li class="room-nb">
-                                                    <i class="fa fa-bed"></i>
-                                                    <span>4chs</span>
+                                </a>
+                            </li>
+                            <li class="col-lg-3 house-item">
+                                <a href="#" class="link">
+                                    <div class="house-photos-slider splide">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img1.jpg">
                                                 </li>
-                                                <li class="bath-nb">
-                                                    <i class="fa fa-bath"></i>
-                                                    <span>2sdb</span>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img2.jpg">
                                                 </li>
-                                                <li class="feet">
-                                                    <i class="fa fa-vector-square"></i>
-                                                    <span>1455m<sup>2</sup></span>
-                                                </li>
-                                                <li>
-                                                 <button class="more-info-shower fa fa-chevron-down"></button>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img3.jpg">
                                                 </li>
                                             </ul>
-                                        </span>
-                                        <span class="more-info" style="display: none;">
-                                            <ul>
-                                                <li class="d-inline-block mr-2">Piscine</li>
-                                                <li class="d-inline-block mr-2">Jardin</li>
-                                                <li class="d-inline-block mr-2">Cheminée</li>
-                                                <li class="d-inline-block mr-2">Garage</li>
-                                                <li class="d-inline-block mr-2">Au bors de l'eau</li>
-                                                <li class="d-inline-block mr-2">Jardin</li>
-                                                <li class="d-inline-block mr-2">Cheminée</li>
-                                                <li class="d-inline-block mr-2">Garage</li>
-                                            </ul>
-                                        </span>
+                                        </div>
                                     </div>
-                                    <span id="price" class="price ml-auto">340$ <sub>/mois</sub> </span>
-                                </div>
-                            </a>
-                        </li>
+                                    <div class="item-info">
+                                        <div>
+                                            <h6 class="house-title">
+                                                <span class="town">Kinshasa</span>
+                                                <span class="type">Villa</span>
+                                            </h6>
+                                            <span class="short-info">
+                                                <ul>
+                                                    <li class="room-nb">
+                                                        <i class="fa fa-bed"></i>
+                                                        <span>4chs</span>
+                                                    </li>
+                                                    <li class="bath-nb">
+                                                        <i class="fa fa-bath"></i>
+                                                        <span>2sdb</span>
+                                                    </li>
+                                                    <li class="feet">
+                                                        <i class="fa fa-vector-square"></i>
+                                                        <span>1455m<sup>2</sup></span>
+                                                    </li>
+                                                    <li>
+                                                     <button class="more-info-shower fa fa-chevron-down"></button>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                            <span class="more-info" style="display: none;">
+                                                <ul>
+                                                    <li class="d-inline-block mr-2">Piscine</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                    <li class="d-inline-block mr-2">Au bors de l'eau</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                </ul>
+                                            </span>
+                                        </div>
+                                        <span id="price" class="price ml-auto">340$ <sub>/mois</sub> </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="col-lg-3 house-item">
+                                <a href="#" class="link">
+                                    <div class="house-photos-slider splide">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img1.jpg">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img2.jpg">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img3.jpg">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <div>
+                                            <h6 class="house-title">
+                                                <span class="town">Kinshasa</span>
+                                                <span class="type">Villa</span>
+                                            </h6>
+                                            <span class="short-info">
+                                                <ul>
+                                                    <li class="room-nb">
+                                                        <i class="fa fa-bed"></i>
+                                                        <span>4chs</span>
+                                                    </li>
+                                                    <li class="bath-nb">
+                                                        <i class="fa fa-bath"></i>
+                                                        <span>2sdb</span>
+                                                    </li>
+                                                    <li class="feet">
+                                                        <i class="fa fa-vector-square"></i>
+                                                        <span>1455m<sup>2</sup></span>
+                                                    </li>
+                                                    <li>
+                                                     <button class="more-info-shower fa fa-chevron-down"></button>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                            <span class="more-info" style="display: none;">
+                                                <ul>
+                                                    <li class="d-inline-block mr-2">Piscine</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                    <li class="d-inline-block mr-2">Au bors de l'eau</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                </ul>
+                                            </span>
+                                        </div>
+                                        <span id="price" class="price ml-auto">340$ <sub>/mois</sub> </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="col-lg-3 house-item">
+                                <a href="#" class="link">
+                                    <div class="house-photos-slider splide">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img1.jpg">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img2.jpg">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img3.jpg">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <div>
+                                            <h6 class="house-title">
+                                                <span class="town">Kinshasa</span>
+                                                <span class="type">Villa</span>
+                                            </h6>
+                                            <span class="short-info">
+                                                <ul>
+                                                    <li class="room-nb">
+                                                        <i class="fa fa-bed"></i>
+                                                        <span>4chs</span>
+                                                    </li>
+                                                    <li class="bath-nb">
+                                                        <i class="fa fa-bath"></i>
+                                                        <span>2sdb</span>
+                                                    </li>
+                                                    <li class="feet">
+                                                        <i class="fa fa-vector-square"></i>
+                                                        <span>1455m<sup>2</sup></span>
+                                                    </li>
+                                                    <li>
+                                                     <button class="more-info-shower fa fa-chevron-down"></button>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                            <span class="more-info" style="display: none;">
+                                                <ul>
+                                                    <li class="d-inline-block mr-2">Piscine</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                    <li class="d-inline-block mr-2">Au bors de l'eau</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                </ul>
+                                            </span>
+                                        </div>
+                                        <span id="price" class="price ml-auto">340$ <sub>/mois</sub> </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="col-lg-3 house-item">
+                                <a href="#" class="link">
+                                    <div class="house-photos-slider splide">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img1.jpg">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img2.jpg">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img3.jpg">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <div>
+                                            <h6 class="house-title">
+                                                <span class="town">Kinshasa</span>
+                                                <span class="type">Villa</span>
+                                            </h6>
+                                            <span class="short-info">
+                                                <ul>
+                                                    <li class="room-nb">
+                                                        <i class="fa fa-bed"></i>
+                                                        <span>4chs</span>
+                                                    </li>
+                                                    <li class="bath-nb">
+                                                        <i class="fa fa-bath"></i>
+                                                        <span>2sdb</span>
+                                                    </li>
+                                                    <li class="feet">
+                                                        <i class="fa fa-vector-square"></i>
+                                                        <span>1455m<sup>2</sup></span>
+                                                    </li>
+                                                    <li>
+                                                     <button class="more-info-shower fa fa-chevron-down"></button>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                            <span class="more-info" style="display: none;">
+                                                <ul>
+                                                    <li class="d-inline-block mr-2">Piscine</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                    <li class="d-inline-block mr-2">Au bors de l'eau</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                </ul>
+                                            </span>
+                                        </div>
+                                        <span id="price" class="price ml-auto">340$ <sub>/mois</sub> </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="col-lg-3 house-item">
+                                <a href="#" class="link">
+                                    <div class="house-photos-slider splide">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img1.jpg">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img2.jpg">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img3.jpg">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <div>
+                                            <h6 class="house-title">
+                                                <span class="town">Kinshasa</span>
+                                                <span class="type">Villa</span>
+                                            </h6>
+                                            <span class="short-info">
+                                                <ul>
+                                                    <li class="room-nb">
+                                                        <i class="fa fa-bed"></i>
+                                                        <span>4chs</span>
+                                                    </li>
+                                                    <li class="bath-nb">
+                                                        <i class="fa fa-bath"></i>
+                                                        <span>2sdb</span>
+                                                    </li>
+                                                    <li class="feet">
+                                                        <i class="fa fa-vector-square"></i>
+                                                        <span>1455m<sup>2</sup></span>
+                                                    </li>
+                                                    <li>
+                                                     <button class="more-info-shower fa fa-chevron-down"></button>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                            <span class="more-info" style="display: none;">
+                                                <ul>
+                                                    <li class="d-inline-block mr-2">Piscine</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                    <li class="d-inline-block mr-2">Au bors de l'eau</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                </ul>
+                                            </span>
+                                        </div>
+                                        <span id="price" class="price ml-auto">340$ <sub>/mois</sub> </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="col-lg-3 house-item">
+                                <a href="#" class="link">
+                                    <div class="house-photos-slider splide">
+                                        <div class="splide__track">
+                                            <ul class="splide__list">
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img1.jpg">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img2.jpg">
+                                                </li>
+                                                <li class="splide__slide">
+                                                    <img src="../assets/images/img3.jpg">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <div>
+                                            <h6 class="house-title">
+                                                <span class="town">Kinshasa</span>
+                                                <span class="type">Villa</span>
+                                            </h6>
+                                            <span class="short-info">
+                                                <ul>
+                                                    <li class="room-nb">
+                                                        <i class="fa fa-bed"></i>
+                                                        <span>4chs</span>
+                                                    </li>
+                                                    <li class="bath-nb">
+                                                        <i class="fa fa-bath"></i>
+                                                        <span>2sdb</span>
+                                                    </li>
+                                                    <li class="feet">
+                                                        <i class="fa fa-vector-square"></i>
+                                                        <span>1455m<sup>2</sup></span>
+                                                    </li>
+                                                    <li>
+                                                     <button class="more-info-shower fa fa-chevron-down"></button>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                            <span class="more-info" style="display: none;">
+                                                <ul>
+                                                    <li class="d-inline-block mr-2">Piscine</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                    <li class="d-inline-block mr-2">Au bors de l'eau</li>
+                                                    <li class="d-inline-block mr-2">Jardin</li>
+                                                    <li class="d-inline-block mr-2">Cheminée</li>
+                                                    <li class="d-inline-block mr-2">Garage</li>
+                                                </ul>
+                                            </span>
+                                        </div>
+                                        <span id="price" class="price ml-auto">340$ <sub>/mois</sub> </span>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
                     </div>
                 </div>
             </div>
