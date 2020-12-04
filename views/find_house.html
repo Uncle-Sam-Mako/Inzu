@@ -92,14 +92,14 @@
         <div class="find-section py-3">
             <div class="container">
                 <div class="">
-                   <div class="view-mode py-3 mx">
-                        <span class="mx-2">
-                            <input type="radio" name="view-mode" id="list-view" class="radio-wow">
-                            <label for="list-view">Vue liste</label>
+                   <div class="view-mode-change my-3">
+                        <span class="view-mode-list-btn">
+                            <input type="radio" name="view-mode" id="view-mode-list" checked="true">
+                            <label for="view-mode-list"><i class="fa fa-list"></i> Liste</label>
                         </span>
-                        <span class="mx-2">
-                            <input type="radio" name="view-mode" id="map-view" class="radio-wow">
-                            <label for="map-view">Vue carte</label>
+                        <span class="view-mode-map-btn">
+                            <input type="radio" name="view-mode" id="view-mode-map">
+                            <label for="view-mode-map"><i class="fa fa-map"></i> Carte</label>
                         </span>
                    </div>
                     <div class="houses-side">
@@ -142,70 +142,11 @@
                                                         <span>1455m<sup>2</sup></span>
                                                     </li>
                                                     <li>
-                                                     <button class="more-info-shower fa fa-chevron-down"></button>
+                                                     <button onclick="window.location.href = '#0123abc'" class="more-info-shower fa fa-chevron-down"></button>
                                                     </li>
                                                 </ul>
                                             </span>
-                                            <span class="more-info" style="display: none;">
-                                                <ul>
-                                                    <li class="d-inline-block mr-2">Piscine</li>
-                                                    <li class="d-inline-block mr-2">Jardin</li>
-                                                    <li class="d-inline-block mr-2">Cheminée</li>
-                                                    <li class="d-inline-block mr-2">Garage</li>
-                                                    <li class="d-inline-block mr-2">Au bors de l'eau</li>
-                                                    <li class="d-inline-block mr-2">Jardin</li>
-                                                    <li class="d-inline-block mr-2">Cheminée</li>
-                                                    <li class="d-inline-block mr-2">Garage</li>
-                                                </ul>
-                                            </span>
-                                        </div>
-                                        <span id="price" class="price ml-auto">340$ <sub>/mois</sub> </span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-3 house-item">
-                                <a href="#" class="link">
-                                    <div class="house-photos-slider splide">
-                                        <div class="splide__track">
-                                            <ul class="splide__list">
-                                                <li class="splide__slide">
-                                                    <img src="../assets/images/img1.jpg">
-                                                </li>
-                                                <li class="splide__slide">
-                                                    <img src="../assets/images/img2.jpg">
-                                                </li>
-                                                <li class="splide__slide">
-                                                    <img src="../assets/images/img3.jpg">
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="item-info">
-                                        <div>
-                                            <h6 class="house-title">
-                                                <span class="town">Kinshasa</span>
-                                                <span class="type">Villa</span>
-                                            </h6>
-                                            <span class="short-info">
-                                                <ul>
-                                                    <li class="room-nb">
-                                                        <i class="fa fa-bed"></i>
-                                                        <span>4chs</span>
-                                                    </li>
-                                                    <li class="bath-nb">
-                                                        <i class="fa fa-bath"></i>
-                                                        <span>2sdb</span>
-                                                    </li>
-                                                    <li class="feet">
-                                                        <i class="fa fa-vector-square"></i>
-                                                        <span>1455m<sup>2</sup></span>
-                                                    </li>
-                                                    <li>
-                                                     <button class="more-info-shower fa fa-chevron-down"></button>
-                                                    </li>
-                                                </ul>
-                                            </span>
-                                            <span class="more-info" style="display: none;">
+                                            <span id="0123abc" class="more-info" style="display: none;">
                                                 <ul>
                                                     <li class="d-inline-block mr-2">Piscine</li>
                                                     <li class="d-inline-block mr-2">Jardin</li>
@@ -586,5 +527,22 @@
     <script src="../splide-2.4.12/dist/js/splide.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/carousel.js"></script>
+    <script>
+        // let boxInfo = null;
+        // document.querySelectorAll(".more-info-shower").forEach(a => {
+        //     a.addEventListener('click', showInfo);
+        // })
+        // const showInfo = function(e){
+        //     e.preventDefault();
+        //     boxInfo = document.querySelector(e.target.getAttribute('href'));
+        //     boxInfo.style.display = "block";
+        // }
+        document.querySelectorAll('.link').forEach(a => {
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+            })
+        });
+       
+    </script>
     </body>
     </html>

@@ -94,20 +94,11 @@
     .splide__arrow{
         background: #fff;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.527);
-        opacity: 0;
-        transition: 0.6s;
         svg{
             width: .9em;
             height: 9em;
         }
-    }
-    .splide:hover{
-            .splide__arrow{
-                opacity: 1;
-            }
-        
-    }
-     
+    } 
     //input-box
     .input-box {
         input, textarea {
@@ -337,6 +328,16 @@
                 }
             }
         }
+        .splide__arrow{
+            opacity: 0;
+            transition: 0.6s;
+        }
+        .splide:hover{
+            .splide__arrow{
+                opacity: 1;
+            }
+        
+    }
     }
     footer{
         min-height: 300px;
