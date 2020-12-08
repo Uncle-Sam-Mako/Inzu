@@ -37,3 +37,22 @@ const loginOptions = $(function() {
         $checked.val()=="phone" ?  $("#loginPhoneEmail").addClass("mode-phone") : $("#loginPhoneEmail").removeClass("mode-phone");
     });
 });
+
+//Open popups
+let openedPopup = null;
+let openPopup = function(e){
+    e.preventDefault();
+    if(openedPopup !== null)openedPopup.setAttribute('data-hidden', true);
+    openedPopup = document.querySelector(e.target.getAttribute('data-popup'));
+    openedPopup.setAttribute('data-hidden', false);
+}
+let closePopup = function(e){
+    if(openedPopup===null) return;
+    e.preventDefault();
+    openedPopup.setAttribute("data-hidden", true);
+    openedPopup = null;
+}
+let popupOpeners = Array.from(document.querySelectorAll(".openPopup"));
+    popupOpeners.forEach(opener => {
+    opener.addEventListener("click", openPopup);
+});
