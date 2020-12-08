@@ -63,6 +63,10 @@
                         padding: 8px 5px;
                         margin: 0 1px;
                         transition: .6s;
+                        cursor: pointer;
+                        &:hover{
+                            background: #eee;
+                        }
                     }
                     input{
                         display: none;
