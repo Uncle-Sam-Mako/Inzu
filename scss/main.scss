@@ -10,16 +10,41 @@
     @import './find_house';
     /*----------------------------------------*/
     /*-----------Import---fonts---------*/
+    @font-face {
+        font-family: 'Proxima Nova Alt Rg';
+        src: url('../font/ProximaNovaA-Regular.woff2') format('woff2'),
+            url('../font/ProximaNovaA-Regular.woff') format('woff'),
+            url('../font/ProximaNovaA-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    
+    @font-face {
+        font-family: 'Proxima Nova Rg';
+        src: url('../font/ProximaNova-Regular.woff2') format('woff2'),
+            url('../font/ProximaNova-Regular.woff') format('woff'),
+            url('../font/ProximaNova-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    
+
     
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    @import url('https://db.onlinewebfonts.com/c/0b51833ff62e4af8acb5fd3e2bf59e97?family=SF+Pro+Display');
+
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
     /*---------------------------------*/
     
     html,
     body {
-        font-family: $font-primary;
         font-size: 15px;
         color: #666;
         height: 100%;
+        font-family: 'Proxima Nova Rg' !important;
     }
     a,
     a:hover,
@@ -78,14 +103,15 @@
             }
         }
         &.btn-blind {
-            background: #ffb400;
+            background: linear-gradient(#ffb400, #ff9305);
             color: #fff;
             font-weight: bold;
             display: block;
             padding: 6px 20px;
-            border-radius: 30px;
+            border-radius: 5px;
             &:hover {
-                background: #eba400;
+                color: white;
+                background:#ffb400;
             }
         }
     }
@@ -94,6 +120,7 @@
     .splide__arrow{
         background: #fff;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.527);
+        opacity: 0.6;
         svg{
             width: .9em;
             height: 9em;
@@ -101,6 +128,13 @@
     } 
     //input-box
     .input-box {
+        &.gray{
+            background: #E5E5E5;
+            input, textarea{
+                font-weight: 700;
+            }
+            
+        }
         input, textarea {
             border: none;
             background: transparent;
@@ -329,19 +363,18 @@
             }
         }
         .splide__arrow{
-            opacity: 0;
+            visibility: hidden;
             transition: 0.6s;
         }
         .splide:hover{
             .splide__arrow{
-                opacity: 1;
+                visibility: visible;
             }
-        
-    }
+        }
     }
     footer{
         min-height: 300px;
-        background: #0099ff13;
+        background: #fafafa;
         border-top: 1px solid #ccc;
         .footer-container{
            .body{
@@ -384,7 +417,7 @@
                    .links-list{
                        margin: 10px 0;
                    }
-               }
+                }
             }
         }
     }

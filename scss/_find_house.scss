@@ -11,16 +11,34 @@
         margin: 0;
         li{
             display: inline-block;
-            input{
-                background: #dddddd;
+            position: relative;
+            button{
+                display: block;
+                background: #fff;
                 margin: 5px 3px;
-                padding: 5px;
+                padding: 8px 20px;
                 text-align: center;
-                border: none;
+                border: 1px solid #ddd;
                 border-radius: 5px;
                 font-size: .9em;
-                font-weight: 600;
-                cursor: pointer;
+                min-width: 100px;
+                color: #666;
+            }
+            .popup{
+                position: absolute;
+                z-index: 9;
+                width: 300px;
+                background: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.123);
+                padding: 10px;
+                &--type li{
+                    display: block;
+                    margin: 10px 0;
+                }
+                &[data-hidden=true]{
+                    display: none;
+                }
             }
         }
     }
@@ -52,7 +70,7 @@
         position: relative;
         padding: 10px 15px;
         border-radius: 20px;
-        transition: .6s;
+        transition: ease-in .6s;
         margin : 0;
         cursor: pointer;
         &::before{
@@ -84,9 +102,12 @@
     }
 }
 .find-section{
+    .houses-container{
+        justify-content: start;
+    }
     .houses-side{
         .house-item{
-                margin: 5px auto;
+            margin: 10px 0;
         }
     }
 }

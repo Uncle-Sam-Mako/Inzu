@@ -26,23 +26,54 @@ header {
 
 #town-slider {
     .slide-img img {
-        border-radius: 25px;
+        border-radius: 25px; 
     }
-    .slide-text h6 {
-        font-weight: bold;
-        margin: 5px 0 0 15px;
+    .slide-text{
+        h6{
+            font-weight: bolder;
+            font-size: 1.1em;
+            margin: 0;
+        }
+        p{
+            
+            //text-transform: uppercase;
+            font-size: smaller;
+        }
+        
     }
     .splide__slide .link:hover {
         img {
             @include transition;
-            box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.164);
+            box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+        }
+    }
+    .town-item{
+        position: relative;
+        .slide-img{
+            position: relative;
+            display: block;
+            &::before{
+                position: absolute;
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+                background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            }
+        }
+        .slide-text{
+            position: absolute;
+            bottom: 0px;
+            left: 30px;
+            color: white;
         }
     }
 }
 
 .advantages{
     min-height: 400px;
-    background: #0099ff13;
+    background: #fff;
     h5{
         color: #ffb400;
         text-transform: uppercase;
@@ -75,13 +106,13 @@ header {
 }
 .announce-banner{
     min-height: 400px;
-    background: url('../assets/images/bg2.jpg') center no-repeat;
+    background: #eee;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     .text{
-        color: white;
+        color:#666;
         h3{
             font-weight: bold;
         }

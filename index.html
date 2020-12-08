@@ -63,20 +63,20 @@
             <div class="banner-text col-lg-6">
                 <h3 class="h3 banner-title">Louer une maison, une villa, un appartement dans votre ville ou ailleurs.</h3>
             </div>
-            <div class="banner-form col-lg-7">
-                <div class="banner-form-content py-5 px-lg-5">
+            <div class="banner-form col-lg-6">
+                <div class="banner-form-content col-lg-11 mx-auto py-5 px-lg-5">
                     <form action="#">
-                        <span class="input-box my-3">
+                        <span class="input-box gray my-3">
                             <input type="text" placeholder="Dans quelle ville ?">
                         </span>
-                        <span class="input-box my-3">
+                        <span class="input-box gray my-3">
                             <input type="text" placeholder="Quel type ?">
                         </span>
-                        <span class="input-box my-3 grid right text-center">
+                        <span class="input-box gray my-3 grid right text-center">
                             <input type="number" placeholder="Budjet Max">
                             <span><i class="fa fa-dollar-sign"></i></span>
                         </span>
-                        <input class="btn btn-blind mx-auto d-block" type="submit" value="Rechercher">
+                        <input class="btn btn-blind mx-auto d-block full-w" type="submit" value="Rechercher">
                     </form>
                 </div>
 
@@ -85,7 +85,7 @@
     </header>
     <section class="main-section container-fluid mt-5 py-5">
         <div class="last-houses-banner my-5 px-lg-5">
-            <h5 class="h5 font-weight-bold text-center">Les dernières maisons sur Inzu</h5>
+            <h4 class="h4 text-center" style="font-weight: 900;">Les dernières maisons sur Inzu</h4>
             <div id="house-slider" class="house-slider splide mt-5">
                 <div class="splide__track">
                     <ul class="splide__list">
@@ -333,8 +333,8 @@
     <section class="announce-banner">
         <div class="container text-center m-auto">
             <span class="text">
-                <h3>Déposer une annonce sur Inzu</h3>
-                <p>Et dites bonjour aux nouveaux clients</p>
+                <h1 style="font-weight: 900">Déposer une annonce sur Inzu</h1>
+                <p>Et dites bonjour aux nouveaux clients et aux nouveaux revenus</p>
             </span>
             <button class="btn btn-wow" onclick="window.location.href = './views/under_building.html'">Publier une annonce</button>
         </div>
@@ -344,44 +344,48 @@
             <h5 class="h5 font-weight-bold text-center">Des maisons dans plusieurs villes</h5>
             <div id="town-slider" class="splide mt-5">
                 <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide col-lg-3">
-                            <a href="./views/under_building.html" class="link">
+                    <ul class="splide__list town-list">
+                        <li class="splide__slide col-lg-3 town-item">
+                            <a href="./views/under_building.html" class="town-link link">
                                 <span class="slide-img">
                                     <img src="./assets/images/town1.jpg" alt="">
                                 </span>
                                 <span class="slide-text">
                                     <h6>Kinshasa</h6>
+                                    <p>1570 maisons</p>
                                 </span>
                             </a>
                         </li>
-                        <li class="splide__slide col-lg-3">
-                            <a href="./views/under_building.html" class="link">
-                                <span class="slide-img">
-                                    <img src="./assets/images/town1.jpg" alt="">
-                                </span>
-                                <span class="slide-text">
-                                    <h6>Lubumbashi</h6>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="splide__slide col-lg-3">
-                            <a href="./views/under_building.html" class="link">
-                                <span class="slide-img">
-                                    <img src="./assets/images/town1.jpg" alt="">
-                                </span>
-                                <span class="slide-text">
-                                    <h6>Likasi</h6>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="splide__slide col-lg-3">
-                            <a href="./views/under_building.html" class="link">
+                        <li class="splide__slide col-lg-3 town-item">
+                            <a href="./views/under_building.html" class="town-link link">
                                 <span class="slide-img">
                                     <img src="./assets/images/town1.jpg" alt="">
                                 </span>
                                 <span class="slide-text">
                                     <h6>Kolwezi</h6>
+                                    <p>341 maisons</p>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="splide__slide col-lg-3 town-item">
+                            <a href="./views/under_building.html" class="town-link link">
+                                <span class="slide-img">
+                                    <img src="./assets/images/town1.jpg" alt="">
+                                </span>
+                                <span class="slide-text">
+                                    <h6>Likasi</h6>
+                                    <p>414 maisons</p>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="splide__slide col-lg-3 town-item">
+                            <a href="./views/under_building.html" class="town-link link">
+                                <span class="slide-img">
+                                    <img src="./assets/images/town1.jpg" alt="">
+                                </span>
+                                <span class="slide-text">
+                                    <h6>Lubumbashi</h6>
+                                    <p>1386 maisons</p>
                                 </span>
                             </a>
                         </li>

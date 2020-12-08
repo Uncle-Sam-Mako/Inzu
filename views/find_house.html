@@ -58,7 +58,7 @@
     </header>
     <section class="find_house_main_section">
         <div class="filter-section">
-            <div class="filter-nav container-fluid" style="margin-top: -4px;">
+            <div class="filter-nav container-fluid">
                 <span class="input-box search-town">
                     <input type="text" placeholder="Ville, Région">
                 </span>
@@ -66,16 +66,56 @@
                     <div class="filter-container">
                         <ul class="filter-list">
                             <li class="filter-item house-type-filter">
-                                <input type="text" placeholder="Type" id="type-filter" name="type-filter">
+                                <button data-popup="#house-type-popup" id="type-filter" class="openPopup">Type</button>
+                                <div class="popup popup--type" id="house-type-popup" data-hidden=true>
+                                   <form action="#">
+                                       <ul>
+                                            <li>
+                                                <span>
+                                                    <input type="radio" class="radio-wow" id="all" name="type" value="all">
+                                                    <label for="all">Tous</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <input type="radio" class="radio-wow" id="simple" name="type" value="simple">
+                                                    <label for="simple">Simple</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <input type="radio" class="radio-wow" id="appart" name="type" value="appart">
+                                                    <label for="appart">Appartement</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <input type="radio" class="radio-wow" id="villa" name="type" value="villa">
+                                                    <label for="villa">Villa</label>
+                                                </span>
+                                            </li>
+                                       </ul>
+                                   </form>
+                                </div>
                             </li>
                             <li class="filter-item house-price-filter">
-                                <input type="text" placeholder="Prix" id="price-filter" name="price-filter">
+                                <button data-popup="#house-price-popup" id="price-filter" class="openPopup">Prix</button>
+                                <div class="popup popup--price" id="house-price-popup" data-hidden=true>
+                                    <form action="#" class="d-flex">
+                                        <span class="input-box">
+                                            <input type="number" name="price" min="100" id="min-price" placeholder="Min($)">
+                                        </span>
+                                        <span class="input-box">
+                                            <input type="number" name="price" min="100" id="max-price" placeholder="Max($)">
+                                        </span>
+                                    </form>
+                                </div>
                             </li>
                             <li class="filter-item house-area-filter">
-                                <input type="text" placeholder="Surface">
+                                <button data-popup="#house-area-popup" id="area-filter" class="openPopup">Surface</button>
                             </li>
                             <li class="filter-item house-beds-filter">
-                                <input type="text" placeholder="Chambres">
+                                <button data-popup="#house-beds-popup" id="beds-filter" class="openPopup">Chambres</button>
                             </li>
                         </ul>
                         <div class="action-btn">
@@ -540,7 +580,25 @@
                 e.preventDefault();
             })
         });
-       
+        let openedPopup = null;
+		let openPopup = function(e){
+			e.preventDefault();
+			if(openedPopup !== null)openedPopup.setAttribute('data-hidden', true);
+			openedPopup = document.querySelector(e.target.getAttribute('data-popup'));
+			openedPopup.setAttribute('data-hidden', false);
+			// openedPopup.querySelector('button').addEventListener('click', closePopup);
+			// console.log(openedPopup);
+		}
+		let closePopup = function(e){
+			if(openedPopup===null) return;
+			e.preventDefault();
+			openedPopup.setAttribute("data-hidden", true);
+			openedPopup = null;
+		}
+		let popupOpeners = Array.from(document.querySelectorAll(".openPopup"));
+		popupOpeners.forEach(opener => {
+			opener.addEventListener("click", openPopup);
+		});
     </script>
     </body>
     </html>
