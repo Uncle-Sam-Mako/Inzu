@@ -27,7 +27,7 @@
             .popup{
                 position: absolute;
                 z-index: 9;
-                width: 300px;
+                min-width: 300px;
                 background: #fff;
                 border-radius: 10px;
                 box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.123);
@@ -38,6 +38,29 @@
                 }
                 &[data-hidden=true]{
                     display: none;
+                }
+                &--beds{
+                    ul{
+                        display: flex;
+                        flex-wrap: nowrap;
+                    }
+                    label{
+                        min-width: 50px;
+                        text-align: center;
+                        background: #f5f5f5;
+                        padding: 8px 5px;
+                        margin: 0 1px;
+                        transition: .6s;
+                    }
+                    input{
+                        display: none;
+                        &:checked{
+                            &+label{
+                                background: #ffb400;
+                                color: #fff;
+                            }
+                        }
+                    }
                 }
             }
         }
