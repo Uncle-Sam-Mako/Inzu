@@ -26,11 +26,11 @@
             }
             @keyframes fadeIn {
                 from{
-                    transform: translateY(-10%);
+                    transform: scale(0.5,0.5);
                     opacity: 0;
                 }
                 to{
-                    transform: translateY(0%);
+                    transform: scale(1,1);
                     opacity: 1;
                 }
             }
@@ -43,7 +43,7 @@
                 box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.123);
                 padding: 10px;
                 opacity: 1;
-                animation: fadeIn 0.6s;
+                animation: fadeIn 0.3s ease-in;
                 &--type li{
                     display: block;
                     margin: 10px 0;
