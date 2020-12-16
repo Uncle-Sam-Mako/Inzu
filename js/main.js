@@ -40,24 +40,33 @@ const loginOptions = $(function() {
 
 //Open popups
 let openedPopup = null;
+let opener = null;
 let openPopup = function(e){
     e.preventDefault();
     if(openedPopup !== null) openedPopup.setAttribute('data-hidden', true);
-    openedPopup = document.querySelector(e.target.getAttribute('data-popup'));
+    opener = e.target;
+    openedPopup = document.querySelector(opener.getAttribute('data-popup'));
     openedPopup.setAttribute('data-hidden', false);
     
 }
 let closePopup = function(e){
     if(openedPopup===null) return;
-    e.preventDefault();
+    //e.preventDefault();
     openedPopup.setAttribute("data-hidden", true);
+    //opener.RemoveEventListener("click", openPopup);
+    $(window).click(function(){
+        if(openedPopup!==null && opener!==null) closePopup();
+    })
     openedPopup = null;
-    opener.RemoveEventListener("click", openPopup);
+    opener = null;
 }
 let popupOpeners = Array.from(document.querySelectorAll(".openPopup"));
     popupOpeners.forEach(opener => {
     opener.addEventListener("click", openPopup);
 });
-
-openedPopup.addEventListener('click', closePopup)
-   
+$(window).click(function(){
+    if(openedPopup!==null && opener!==null) closePopup();
+})
+$(opener).click(function(e){
+    e.stopPropagation();
+})
