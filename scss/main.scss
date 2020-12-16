@@ -1,13 +1,16 @@
     /*-----------Import---stylesheets---------*/
     
-    @import './variables.scss';
-    @import './normalize.scss';
-    @import './index.scss';
-    @import './login.scss';
-    @import './contact_about.scss';
+    @import './variables';
+    @import './normalize';
+    @import './index';
+    @import './login';
+    @import './contact_about';
     @import './error';
     @import './house';
     @import './find_house';
+    @import './add_house';
+
+    
     /*----------------------------------------*/
     /*-----------Import---fonts---------*/
     @font-face {
@@ -77,6 +80,14 @@
             overflow: hidden;
         }
     }
+    .flex-bloc{
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        padding: 20px 35px;
+        box-shadow: 0px 0px 20px #f3f3f3;
+        margin: auto;
+    }
     .full-w{
         width: 100%;
     }
@@ -114,6 +125,10 @@
                 background:#ffb400;
             }
         }
+    }
+    .form-advice{
+        font-size: smaller;
+        margin: 0 10px;
     }
     //SplideJs
 
@@ -156,9 +171,10 @@
         //Pour les champs avec icône
         &.grid {
             display: grid;
+            grid-template-columns: 1fr 50px;
             //Icône à droite
-            &.right {
-                grid-template-columns: 1fr 50px;
+            &.reverse {
+                grid-template-columns: 50px 1fr;
             }
             button{
                 background: transparent;

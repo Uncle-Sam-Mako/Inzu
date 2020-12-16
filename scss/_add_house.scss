@@ -1,0 +1,16 @@
+
+@import './variables';
+.add_house{
+    label{
+        margin: 0 0 0 5px;
+        font-size: small;
+    }
+    .input-box{
+        margin: 0 0 15px 0;
+       // grid-column: ;
+    }
+    .change-step{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
