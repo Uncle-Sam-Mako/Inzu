@@ -60,31 +60,31 @@
         </nav>
     </header>
     <section class="add_house container">
-        <div class="col-lg-5 mx-auto">
+        <div class="col-lg-6 mx-auto">
             <div id="first-step" class="flex-bloc my-3" style="display: none;">
                 <form action="#">
                     <label for="house-town">Ville</label>
                     <span class="input-box">
-                        <input type="text" placeholder="" name="house-town" id="house-town">
+                        <input type="text" placeholder="" name="house-town" id="house-town" required>
                     </span>
                     <label for="house-postal-code">Code postal</label>
                     <span class="input-box">
-                        <input type="text" placeholder="Ex: 730005" name="house-postal-code" id="house-postal-code">
+                        <input type="text" placeholder="Ex: 730005" name="house-postal-code" id="house-postal-code" required>
                     </span>
-                    <label for="house-complet-adress">Adresse complète de votre bien</label>
+                    <label for="house-complet-adress">Adresse complète de votre maison</label>
                     <span class="input-box grid">
-                        <input type="text" placeholder="Ex: 05 Avenue/Quartier/Commune" name="house-complet-adress" id="house-complet-adress">
+                        <input type="text" placeholder="Ex: 05 Avenue/Quartier/Commune" name="house-complet-adress" id="house-complet-adress" required>
                         <button class="fa fa-map-marker"></button>
                     </span>
                 </form>
             </div>
             <div id="second-step" class="flex-bloc my-3" style="">
                 <form action="#">
-                    <div class="house-type-bloc">
-                        <h6>Type de bien</h6>
+                    <div class="house-type-bloc mb-5">
+                        <h6>Type de maison</h6>
                         <span class="radio-container">
                             <input type="radio" name="house-type" id="is-house">
-                            <label for="is-house">Maison</label>
+                            <label for="is-house">Simple</label>
                             <span class="check">
                                 <i class="fa fa-check"></i>
                             </span>
@@ -111,7 +111,25 @@
                             </span>
                         </span>
                     </div>
-                   
+                    <div class="house-description-bloc mb-5">
+                            <label for="house-desc"><h6>Description du maison</h6></label>
+                            <span class="input-box">
+                                <textarea name="" id="house-desc" cols="30" rows="5" placeholder="Ex: Jolie maison construite en 2005, située au bord d'un lac..." required></textarea>
+                            </span>
+                            <p class="small-info">Décrivez votre maison en étant le plus explicite possible. Incluer les caractéristiques principales de votre maison, afin d'attirer l'attention des clients.</p>
+                    </div>
+                    <div class="house-infos-bloc mb-5">
+                        <h6>Informations supplémentaires</h6>
+                        <span class="input-box">
+                            <input type="text" name="owner-name" id="owner-name" placeholder="Nom du propriètaire">
+                        </span>
+                        <span class="input-box">
+                            <input type="text" name="year-bluid" id="year-build" placeholder="Année de construction">
+                        </span>
+                    </div>
+                    <div class="house-features-bloc mb-5">
+                        
+                    </div>
                 </form>
             </div>
             <div class="change-step">
