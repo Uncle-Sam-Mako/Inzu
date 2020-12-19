@@ -112,7 +112,7 @@
                         </span>
                     </div>
                     <div class="house-description-bloc mb-5">
-                            <label for="house-desc"><h6>Description du maison</h6></label>
+                            <label for="house-desc"><h6>Description de la maison</h6></label>
                             <span class="input-box">
                                 <textarea name="" id="house-desc" cols="30" rows="5" placeholder="Ex: Jolie maison construite en 2005, située au bord d'un lac..." required></textarea>
                             </span>
@@ -128,7 +128,95 @@
                         </span>
                     </div>
                     <div class="house-features-bloc mb-5">
-                        
+                        <h6>Caractéristiques de votre maison</h6>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <label for="nbPieces">Pièces</label>
+                                <div class="quantity-input-container">
+                                    <span class="quantity-input">
+                                        <button data-quantity="#nbPieces" class="decrementBtn fa fa-minus" disabled></button>
+                                        <input data-min="1" type="tel"  value="1" name="" id="nbPieces" disabled>
+                                        <button data-quantity="#nbPieces" class="incrementBtn fa fa-plus"></i></button>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <label for="nbBeds">Chambres</label>
+                                <div class="quantity-input-container">
+                                    <span class="quantity-input">
+                                        <button data-quantity="#nbBeds" class="decrementBtn fa fa-minus" disabled></button>
+                                        <input data-min="0" type="tel"  value="0" name="" id="nbBeds" disabled>
+                                        <button data-quantity="#nbBeds" class="incrementBtn fa fa-plus"></button>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <label for="nbLIvingRooms">Salons</label>
+                                <div class="quantity-input-container">
+                                    <span class="quantity-input">
+                                        <button data-quantity="#nbLIvingRooms" class="decrementBtn fa fa-minus" disabled></button>
+                                        <input data-min="0" type="tel"  value="0" name="" id="nbLIvingRooms" disabled>
+                                        <button data-quantity="#nbLIvingRooms" class="incrementBtn fa fa-plus"></button>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <label for="nbToilets">Toilettes</label>
+                                <div class="quantity-input-container">
+                                    <span class="quantity-input">
+                                        <button data-quantity="#nbToilets" class="decrementBtn fa fa-minus" disabled></button>
+                                        <input data-min="0" type="tel"  value="0" name="" id="nbToilets" disabled>
+                                        <button data-quantity="#nbToilets" class="incrementBtn fa fa-plus"></button>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <label for="nbBathRooms">Salle de bain</label>
+                                <div class="quantity-input-container">
+                                    <span class="quantity-input">
+                                        <button data-quantity="#nbBathRooms" class="decrementBtn fa fa-minus" disabled></button>
+                                        <input data-min="0" type="tel"  value="0" name="" id="nbBathRooms" disabled>
+                                        <button data-quantity="#nbBathRooms" class="incrementBtn fa fa-plus"></button>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="feature-item">
+                                <label for="nbKitchens">Cuisine</label>
+                                <div class="quantity-input-container">
+                                    <span class="quantity-input">
+                                        <button data-quantity="#nbKitchens" class="decrementBtn fa fa-minus" disabled></button>
+                                        <input data-min="0" type="tel"  value="0" name="" id="nbKitchens" disabled>
+                                        <button data-quantity="#nbKitchens" class="incrementBtn fa fa-plus"></button>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="house-details-bloc mb-5">
+                        <h6>Autres details</h6>
+                        <ul class="details-list">
+                            <li class="detail-item">
+                                <input class="check-wow" type="checkbox" name="garden" id="garden">
+                                <label for="garden">Jardin</label>
+                            </li>
+                            <li class="detail-item">
+                                <input class="check-wow" type="checkbox"
+                                 name="garage" id="garage">
+                                <label for="garage">Garage</label>
+                            </li>
+                            <li class="detail-item">
+                                <input class="check-wow" type="checkbox" name="pool" id="pool">
+                                <label for="pool">Piscine</label>
+                            </li>
+                            <li class="detail-item">
+                                <input class="check-wow" type="checkbox" name="terrasse" id="terrasse">
+                                <label for="terrasse">Terrasse</label>
+                            </li>
+                            <li class="detail-item">
+                                <input class="check-wow" type="checkbox" name="wash-room" id="wash-room">
+                                <label for="wash-room">Buanderie</label>
+                            </li>
+                        </ul>
                     </div>
                 </form>
             </div>
@@ -146,5 +234,32 @@
     <script src="../js/carousel.js"></script>
     <script src="../js/main.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.querySelectorAll("form button").forEach(e => {
+            e.addEventListener('click', function (event) {
+                event.preventDefault();
+            });
+        });
+        let plusBtn = document.querySelectorAll(".quantity-input .incrementBtn");
+		let moinsBtn = document.querySelectorAll(".quantity-input .decrementBtn");
+		let input = null;
+		let plus = function(e){
+            let moinsBtn = document.querySelector('[data-quantity="' + e.target.getAttribute('data-quantity'));
+            moinsBtn.removeAttribute('disabled');
+            input = document.querySelector(e.target.getAttribute("data-quantity"));
+            input.value++;
+        }
+        let moins = function(e){
+            input = document.querySelector(e.target.getAttribute("data-quantity"));
+            let min = parseInt(input.getAttribute('data-min'));
+			input.value > min ? input.value-- : e.target.setAttribute('disabled', true); 
+		}
+		plusBtn.forEach(e => {
+            e.addEventListener('click', plus);
+        });
+        moinsBtn.forEach(e => {
+            e.addEventListener('click', moins);
+        });
+    </script>
 </body>
 </html>

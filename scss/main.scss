@@ -9,7 +9,6 @@
     @import './house';
     @import './find_house';
     @import './add_house';
-
     
     /*----------------------------------------*/
     /*-----------Import---fonts---------*/
@@ -205,6 +204,70 @@
         }
         &:checked + label::before{
             border: 4px solid #ffb400;
+        }
+    }
+    //checkbox input
+
+    input[type="checkbox"].check-wow{
+        visibility: hidden;
+        position: relative;
+        margin-top: 2px;
+        vertical-align: text-top;
+        width: 1em;
+        height: 1em;
+        & + label{
+            margin-left: 5px;
+        }
+        &:before{
+            visibility: visible;
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: 2px solid #eee;
+            border-radius: 3px;
+            transition: .5s;
+        }
+        &:checked::before{
+            background: #008cff;
+            border: 2px solid #008cff;
+            box-shadow: 0px 3px 5px #eee;
+            line-height: 1em;
+        }
+    }
+
+    //Quantity input
+    .quantity-input-container{
+        width: 100px;
+    }
+    .quantity-input{
+        display: grid;
+        grid-template-columns: 25px 1fr 25px;
+        width: 100%;
+        button{
+            display: block;
+            background: #e5e5e5;
+            border: none;
+            width: 25px;
+            height: 25px;
+            transition: .5s;
+            font-size: smaller;
+            color: #a0a0a0;
+            &:disabled{
+                opacity: 0.5;
+            }
+        }
+        button:not(:disabled){
+            &:hover{
+                background: #ddd;
+            }
+        }
+        input{
+            border: 1px solid #eee;
+            text-align: center;
+            width: 100%;
+            height: 100%;
         }
     }
     //Header
