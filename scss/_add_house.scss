@@ -4,7 +4,7 @@
     .step-title{
         font-weight: 900;
         text-align: center;
-        font-family: $font-third;
+        font-family: $font-primary;
         margin: 10px 0 20px 0;
     }
     h6{
@@ -92,6 +92,33 @@
         }
         label{
             font-size: medium;
+        }
+    }
+    #last-step{
+        .image-list{
+            li.image-item{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px dashed #eee;
+                width: 100%;
+                height: 250px;
+                position: relative;
+                .text{
+                    text-align: center;
+                    i{
+                        font-size: 2.5em;
+                    }
+                }
+                input{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
         }
     }
 }
