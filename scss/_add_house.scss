@@ -121,6 +121,26 @@
             }
         }
     }
+    #finished{
+       .flex-bloc{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+            min-height: 300px;
+       }
+        .text{
+            text-align: center;
+            p{
+                line-height: .9em;
+            }
+            i{
+                display: block;
+                font-size: 3em;
+                color: #00b144;
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
 @media (max-width: 680px) {
     #second-step{

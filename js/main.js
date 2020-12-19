@@ -1,3 +1,9 @@
+/*Pour tous les buttons présents dans un form qui ne sont pas du type : submit, supprimer l'évenement lié au click*/
+document.querySelectorAll("form button").forEach(e => {
+    e.addEventListener('click', function (event) {
+        event.preventDefault();
+    });
+});
 
 // Formulaire semi-fixe dans house.html
 const semiFixed = $(function() {

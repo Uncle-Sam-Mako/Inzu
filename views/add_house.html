@@ -61,209 +61,217 @@
     </header>
     <section class="add_house container">
         <div>
-            <div id="first-step" class="my-3 mx-auto col-lg-5" style="">
-                <h5 class="step-title">Inscrivez votre maison gratuitement</h5>
-                <div class="flex-bloc">
-                    <form action="#">
-                        <label for="house-town">Ville</label>
-                        <span class="input-box">
-                            <input type="text" placeholder="Ex: Lubumbashi" name="house-town" id="house-town" required>
-                        </span>
-                        <label for="house-postal-code">Code postal</label>
-                        <span class="input-box">
-                            <input type="text" placeholder="Ex: 730005" name="house-postal-code" id="house-postal-code" required>
-                        </span>
-                        <label for="house-complet-adress">Adresse complète de votre maison</label>
-                        <span class="input-box grid">
-                            <input type="text" placeholder="Ex: 05 Avenue/Quartier/Commune" name="house-complet-adress" id="house-complet-adress" required>
-                            <button class="fa fa-map-marker"></button>
-                        </span>
-                    </form>
-                </div>
-            </div>
-            <div id="second-step" class="col-lg-6 m-auto my-3" style="">
-                <h5 class="step-title">Décrivez votre maison</h5>
-               <div class="flex-bloc">
-                    <form action="#">
-                        <div class="house-type-bloc mb-5">
-                            <h6>Type de maison</h6>
-                            <span class="radio-container">
-                                <input type="radio" name="house-type" id="is-house">
-                                <label for="is-house">Simple</label>
-                                <span class="check">
-                                    <i class="fa fa-check"></i>
-                                </span>
+            <form action="#" class="multi-steps">
+                <div class="steps-container">
+                    <fieldset id="first-step" class="step col-lg-5">
+                        <h5 class="step-title">Inscrivez votre maison sur Inzu</h5>
+                        <div class="flex-bloc">
+                            <label for="house-town">Ville</label>
+                            <span class="input-box">
+                                <input type="text" placeholder="Ex: Lubumbashi" name="house-town" id="house-town" required>
                             </span>
-                            <span class="radio-container">
-                                <input type="radio" name="house-type" id="is-apartment">
-                                <label for="is-apartment">Appartement</label>
-                                <span class="check">
-                                    <i class="fa fa-check"></i>
-                                </span>
+                            <label for="house-postal-code">Code postal</label>
+                            <span class="input-box">
+                                <input type="text" placeholder="Ex: 730005" name="house-postal-code" id="house-postal-code" required>
                             </span>
-                            <span class="radio-container">
-                                <input type="radio" name="house-type" id="is-villa">
-                                <label for="is-villa">Villa</label>
-                                <span class="check">
-                                    <i class="fa fa-check"></i>
-                                </span>
-                            </span>
-                            <span class="radio-container">
-                                <input type="radio" name="house-type" id="is-other">
-                                <label for="is-other">Autres</label>
-                                <span class="check">
-                                    <i class="fa fa-check"></i>
-                                </span>
+                            <label for="house-complet-adress">Adresse complète de votre maison</label>
+                            <span class="input-box grid">
+                                <input type="text" placeholder="Ex: 05 Avenue/Quartier/Commune" name="house-complet-adress" id="house-complet-adress" required>
+                                <button class="fa fa-map-marker"></button>
                             </span>
                         </div>
-                        <div class="house-description-bloc mb-5">
+                    </fieldset>
+                    <fieldset id="second-step" class="step col-lg-6">
+                        <h5 class="step-title">Décrivez votre maison</h5>
+                        <div class="flex-bloc">
+                            <div class="house-type-bloc mb-5">
+                                <h6>Type de maison</h6>
+                                <span class="radio-container">
+                                    <input type="radio" name="house-type" id="is-house">
+                                    <label for="is-house">Simple</label>
+                                    <span class="check">
+                                        <i class="fa fa-check"></i>
+                                    </span>
+                                </span>
+                                <span class="radio-container">
+                                    <input type="radio" name="house-type" id="is-apartment">
+                                    <label for="is-apartment">Appartement</label>
+                                    <span class="check">
+                                        <i class="fa fa-check"></i>
+                                    </span>
+                                </span>
+                                <span class="radio-container">
+                                    <input type="radio" name="house-type" id="is-villa">
+                                    <label for="is-villa">Villa</label>
+                                    <span class="check">
+                                        <i class="fa fa-check"></i>
+                                    </span>
+                                </span>
+                                <span class="radio-container">
+                                    <input type="radio" name="house-type" id="is-other">
+                                    <label for="is-other">Autres</label>
+                                    <span class="check">
+                                        <i class="fa fa-check"></i>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="house-description-bloc mb-5">
                                 <label for="house-desc"><h6>Description de la maison</h6></label>
                                 <span class="input-box">
                                     <textarea name="" id="house-desc" cols="30" rows="5" placeholder="Ex: Jolie maison construite en 2005, située au bord d'un lac..." required></textarea>
                                 </span>
                                 <p class="small-info">Décrivez votre maison en étant le plus explicite possible. Incluer les caractéristiques principales de votre maison, afin d'attirer l'attention des clients.</p>
-                        </div>
-                        <div class="house-infos-bloc mb-5">
-                            <h6>Informations supplémentaires</h6>
-                            <span class="input-box">
-                                <input type="text" name="owner-name" id="owner-name" placeholder="Nom du propriètaire">
-                            </span>
-                            <span class="input-box">
-                                <input type="text" name="year-bluid" id="year-build" placeholder="Année de construction">
-                            </span>
-                        </div>
-                        <div class="house-features-bloc mb-5">
-                            <h6>Caractéristiques de votre maison</h6>
-                            <ul class="feature-list">
-                                <li class="feature-item">
-                                    <label for="nbPieces">Pièces</label>
-                                    <div class="quantity-input-container">
-                                        <span class="quantity-input">
-                                            <button data-quantity="#nbPieces" class="decrementBtn fa fa-minus" disabled></button>
-                                            <input data-min="1" type="tel"  value="1" name="" id="nbPieces" disabled>
-                                            <button data-quantity="#nbPieces" class="incrementBtn fa fa-plus"></i></button>
-                                        </span>
-                                    </div>
-                                </li>
-                                <li class="feature-item">
-                                    <label for="nbBeds">Chambres</label>
-                                    <div class="quantity-input-container">
-                                        <span class="quantity-input">
-                                            <button data-quantity="#nbBeds" class="decrementBtn fa fa-minus" disabled></button>
-                                            <input data-min="0" type="tel"  value="0" name="" id="nbBeds" disabled>
-                                            <button data-quantity="#nbBeds" class="incrementBtn fa fa-plus"></button>
-                                        </span>
-                                    </div>
-                                </li>
-                                <li class="feature-item">
-                                    <label for="nbLIvingRooms">Salons</label>
-                                    <div class="quantity-input-container">
-                                        <span class="quantity-input">
-                                            <button data-quantity="#nbLIvingRooms" class="decrementBtn fa fa-minus" disabled></button>
-                                            <input data-min="0" type="tel"  value="0" name="" id="nbLIvingRooms" disabled>
-                                            <button data-quantity="#nbLIvingRooms" class="incrementBtn fa fa-plus"></button>
-                                        </span>
-                                    </div>
-                                </li>
-                                <li class="feature-item">
-                                    <label for="nbToilets">Toilettes</label>
-                                    <div class="quantity-input-container">
-                                        <span class="quantity-input">
-                                            <button data-quantity="#nbToilets" class="decrementBtn fa fa-minus" disabled></button>
-                                            <input data-min="0" type="tel"  value="0" name="" id="nbToilets" disabled>
-                                            <button data-quantity="#nbToilets" class="incrementBtn fa fa-plus"></button>
-                                        </span>
-                                    </div>
-                                </li>
-                                <li class="feature-item">
-                                    <label for="nbBathRooms">Salle de bain</label>
-                                    <div class="quantity-input-container">
-                                        <span class="quantity-input">
-                                            <button data-quantity="#nbBathRooms" class="decrementBtn fa fa-minus" disabled></button>
-                                            <input data-min="0" type="tel"  value="0" name="" id="nbBathRooms" disabled>
-                                            <button data-quantity="#nbBathRooms" class="incrementBtn fa fa-plus"></button>
-                                        </span>
-                                    </div>
-                                </li>
-                                <li class="feature-item">
-                                    <label for="nbKitchens">Cuisine</label>
-                                    <div class="quantity-input-container">
-                                        <span class="quantity-input">
-                                            <button data-quantity="#nbKitchens" class="decrementBtn fa fa-minus" disabled></button>
-                                            <input data-min="0" type="tel"  value="0" name="" id="nbKitchens" disabled>
-                                            <button data-quantity="#nbKitchens" class="incrementBtn fa fa-plus"></button>
-                                        </span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="house-details-bloc mb-5">
-                            <h6>Autres details</h6>
-                            <ul class="details-list">
-                                <li class="detail-item">
-                                    <input class="check-wow" type="checkbox" name="garden" id="garden">
-                                    <label for="garden">Jardin</label>
-                                </li>
-                                <li class="detail-item">
-                                    <input class="check-wow" type="checkbox"
-                                    name="garage" id="garage">
-                                    <label for="garage">Garage</label>
-                                </li>
-                                <li class="detail-item">
-                                    <input class="check-wow" type="checkbox" name="pool" id="pool">
-                                    <label for="pool">Piscine</label>
-                                </li>
-                                <li class="detail-item">
-                                    <input class="check-wow" type="checkbox" name="terrasse" id="terrasse">
-                                    <label for="terrasse">Terrasse</label>
-                                </li>
-                                <li class="detail-item">
-                                    <input class="check-wow" type="checkbox" name="wash-room" id="wash-room">
-                                    <label for="wash-room">Buanderie</label>
-                                </li>
-                            </ul>
-                        </div>
-                    </form>
-               </div>
-            </div>
-            <div id="third-step" class="mx-auto my-3 col-lg-5" style="">
-                <h5 class="step-title">Quels prix fixez-vous?</h5>
-                <div class="flex-bloc">
-                    <form action="#">
-                        <div>
-                            <label for="house-price">Loyer mensuel</label>
-                            <span class="col-lg-6 input-box grid">
-                                <input type="number" name="house-price" id="house-price">
-                                <i class="fas fa-dollar-sign"></i>
-                            </span>
-                            <p class="small-info">Pour vous trouver des cliens facilement, veuillez fixer un loyer conforme au marché local.</p>
-                        </div>
-                        <div>
-                            <label for="house-guarentee">Garantie demandée</label>
-                            <span class="col-lg-6 input-box grid">
-                                <input type="number" name="house-guarentee" id="house-guarentee">
-                                <i class="fas fa-dollar-sign"></i>
-                            </span>
-                            <p class="small-info">Pour vous trouver des cliens facilement, veuillez fixer une garantie conforme au marché local.</p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div id="last-step" class="my-3 mx-auto col-lg-6">
-                <h5 class="step-title">Montrez-nous votre maison</h5>
-                <div class="flex-bloc">
-                    <h6 class="text-center my-3">Ajoutez des photos ici</h6>
-                    <div class="gallery-container m-auto col-lg-10">
-                        <ul class="image-list">
-                            <li class="main-img image-item">
-                                <input type="file" name="" id="">
-                                <span class="text">
-                                    <i class="fas fa-file-download    "></i>
-                                    <p>Cliquez ou glisser une photo ici pour l'ajouter</p>
+                            </div>
+                            <div class="house-infos-bloc mb-5">
+                                <h6>Informations supplémentaires</h6>
+                                <span class="input-box">
+                                    <input type="text" name="owner-name" id="owner-name" placeholder="Nom du propriètaire">
                                 </span>
-                            </li>
-                        </ul>
-                    </div>
+                                <span class="input-box">
+                                    <input type="text" name="year-bluid" id="year-build" placeholder="Année de construction">
+                                </span>
+                            </div>
+                            <div class="house-features-bloc mb-5">
+                                <h6>Caractéristiques de votre maison</h6>
+                                <ul class="feature-list">
+                                    <li class="feature-item">
+                                        <label for="nbPieces">Pièces</label>
+                                        <div class="quantity-input-container">
+                                            <span class="quantity-input">
+                                                <button data-quantity="#nbPieces" class="decrementBtn fa fa-minus" disabled></button>
+                                                <input data-min="1" type="tel"  value="1" name="" id="nbPieces" disabled>
+                                                <button data-quantity="#nbPieces" class="incrementBtn fa fa-plus"></i></button>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <label for="nbBeds">Chambres</label>
+                                        <div class="quantity-input-container">
+                                            <span class="quantity-input">
+                                                <button data-quantity="#nbBeds" class="decrementBtn fa fa-minus" disabled></button>
+                                                <input data-min="0" type="tel"  value="0" name="" id="nbBeds" disabled>
+                                                <button data-quantity="#nbBeds" class="incrementBtn fa fa-plus"></button>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <label for="nbLIvingRooms">Salons</label>
+                                        <div class="quantity-input-container">
+                                            <span class="quantity-input">
+                                                <button data-quantity="#nbLIvingRooms" class="decrementBtn fa fa-minus" disabled></button>
+                                                <input data-min="0" type="tel"  value="0" name="" id="nbLIvingRooms" disabled>
+                                                <button data-quantity="#nbLIvingRooms" class="incrementBtn fa fa-plus"></button>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <label for="nbToilets">Toilettes</label>
+                                        <div class="quantity-input-container">
+                                            <span class="quantity-input">
+                                                <button data-quantity="#nbToilets" class="decrementBtn fa fa-minus" disabled></button>
+                                                <input data-min="0" type="tel"  value="0" name="" id="nbToilets" disabled>
+                                                <button data-quantity="#nbToilets" class="incrementBtn fa fa-plus"></button>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <label for="nbBathRooms">Salle de bain</label>
+                                        <div class="quantity-input-container">
+                                            <span class="quantity-input">
+                                                <button data-quantity="#nbBathRooms" class="decrementBtn fa fa-minus" disabled></button>
+                                                <input data-min="0" type="tel"  value="0" name="" id="nbBathRooms" disabled>
+                                                <button data-quantity="#nbBathRooms" class="incrementBtn fa fa-plus"></button>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <label for="nbKitchens">Cuisine</label>
+                                        <div class="quantity-input-container">
+                                            <span class="quantity-input">
+                                                <button data-quantity="#nbKitchens" class="decrementBtn fa fa-minus" disabled></button>
+                                                <input data-min="0" type="tel"  value="0" name="" id="nbKitchens" disabled>
+                                                <button data-quantity="#nbKitchens" class="incrementBtn fa fa-plus"></button>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="house-details-bloc mb-5">
+                                <h6>Autres details</h6>
+                                <ul class="details-list">
+                                    <li class="detail-item">
+                                        <input class="check-wow" type="checkbox" name="garden" id="garden">
+                                        <label for="garden">Jardin</label>
+                                    </li>
+                                    <li class="detail-item">
+                                        <input class="check-wow" type="checkbox"
+                                        name="garage" id="garage">
+                                        <label for="garage">Garage</label>
+                                    </li>
+                                    <li class="detail-item">
+                                        <input class="check-wow" type="checkbox" name="pool" id="pool">
+                                        <label for="pool">Piscine</label>
+                                    </li>
+                                    <li class="detail-item">
+                                        <input class="check-wow" type="checkbox" name="terrasse" id="terrasse">
+                                        <label for="terrasse">Terrasse</label>
+                                    </li>
+                                    <li class="detail-item">
+                                        <input class="check-wow" type="checkbox" name="wash-room" id="wash-room">
+                                        <label for="wash-room">Buanderie</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset id="third-step" class="step col-lg-5">
+                        <h5 class="step-title">Quels prix fixez-vous?</h5>
+                        <div class="flex-bloc">
+                            <div>
+                                <label for="house-price">Loyer mensuel</label>
+                                <span class="col-lg-6 input-box grid">
+                                    <input type="number" name="house-price" id="house-price">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </span>
+                                <p class="small-info">Pour vous trouver des cliens facilement, veuillez fixer un loyer conforme au marché local.</p>
+                            </div>
+                            <div>
+                                <label for="house-guarentee">Garantie demandée</label>
+                                <span class="col-lg-6 input-box grid">
+                                    <input type="number" name="house-guarentee" id="house-guarentee">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </span>
+                                <p class="small-info">Pour vous trouver des cliens facilement, veuillez fixer une garantie conforme au marché local.</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset id="last-step" class="step col-lg-5">
+                        <h5 class="step-title">Montrez-nous votre maison</h5>
+                        <div class="flex-bloc">
+                            <h6 class="text-center my-3">Ajoutez des photos ici</h6>
+                            <div class="gallery-container m-auto col-lg-10">
+                                <ul class="image-list">
+                                    <li class="main-img image-item">
+                                        <input type="file" name="" id="">
+                                        <span class="text">
+                                            <i class="fas fa-file-download    "></i>
+                                            <p>Cliquez ou glisser une photo ici pour l'ajouter</p>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+           
+            <div id="finished" class="my-3 mx-auto col-lg-5" style="display: none;">
+                <div class="flex-bloc">
+                    <span class="text">
+                        <i class="fa fa-check-circle"></i>
+                        <p>Ça y est! Votre maison a été ajoutée sur Inzu!</p>
+                        <p>Les clients arrivent!</p>
+                    </span>
                 </div>
             </div>
             <div class="change-step">
@@ -281,11 +289,7 @@
     <script src="../js/main.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        document.querySelectorAll("form button").forEach(e => {
-            e.addEventListener('click', function (event) {
-                event.preventDefault();
-            });
-        });
+        
         let plusBtn = document.querySelectorAll(".quantity-input .incrementBtn");
 		let moinsBtn = document.querySelectorAll(".quantity-input .decrementBtn");
 		let input = null;
