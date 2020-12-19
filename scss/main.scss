@@ -125,10 +125,6 @@
             }
         }
     }
-    .form-advice{
-        font-size: smaller;
-        margin: 0 10px;
-    }
     //SplideJs
 
     .splide__arrow{
@@ -166,10 +162,10 @@
         //Pour les champs avec icône
         &.grid {
             display: grid;
-            grid-template-columns: 1fr 50px;
+            grid-template-columns: 1fr 20%;
             //Icône à droite
             &.reverse {
-                grid-template-columns: 50px 1fr;
+                grid-template-columns: 20% 1fr;
             }
             button{
                 background: transparent;
