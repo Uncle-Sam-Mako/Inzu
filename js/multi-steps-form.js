@@ -1,13 +1,17 @@
-let currentStep = 0;
-let form = document.querySelector('.multi-steps');
-let prevBtn = document.getElementById("prevStepBtn");
-let nextBtn = document.getElementById("nextStepBtn");
-let steps = document.querySelectorAll('.multi-steps .step');
+let currentStep = 0,
+form = document.querySelector('.multi-steps'),
+prevBtn = document.getElementById("prevStepBtn"),nextBtn = document.getElementById("nextStepBtn"),
+steps = document.querySelectorAll('.multi-steps .step'),
+indicatorsContainer = document.getElementById('indicators'),
+currentIndicator = null;
+
 showStep(currentStep);
+createIndicators();
+
 function showStep(n){
     steps[n].classList.add('active');
     /*Le bouton retour est désactivé lorsque on est à la prémière étape */
-    if(currentStep>0){
+    if(currentStep > 0){
         prevBtn.removeAttribute('disabled');
     }else{
         prevBtn.setAttribute('disabled', true);    
@@ -26,8 +30,28 @@ function nextPrev(n){
         form.submit();
         return false;
     }
+    changeIndicator(currentStep);
     showStep(currentStep);
     return false;
 }
-// prevBtn.addEventListener('click', nextPrev(-1));
-// nextBtn.addEventListener('click', nextPrev(1));
+function createIndicators(){
+    let elt = null;
+    for(let i = 0, c = steps.length; i<c; i++){
+        elt = document.createElement('span');
+        elt.className = "indicator";
+        elt.innerHTML = i+1;
+        indicatorsContainer.appendChild(elt);
+        if(i==0) elt.classList.add('active');
+    }
+}
+function changeIndicator(n){
+    let indicators = document.querySelectorAll('.indicator');
+    currentIndicator = document.querySelector('.indicator.active');
+    currentIndicator.classList.remove('active');
+    currentIndicator = indicators[n];
+    currentIndicator.classList.add('active');
+}
+// let indicators = indicatorsContainer.querySelectorAll('.indicator');
+// indicators.forEach(a => {
+//     a.addEventListener('click', console.log("hello"))
+// })

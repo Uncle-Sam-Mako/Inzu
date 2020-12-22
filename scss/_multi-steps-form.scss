@@ -1,0 +1,48 @@
+//Pour le formulaire à plusieures étapes 
+
+@import './variables';
+
+form.multi-steps{
+    .input-invalid{
+        border: 1px solid #ffa3a3;
+        box-shadow: 0px 0px 10px hsla(0, 100%, 61%, 0.239);
+    }
+    .step{
+        margin: 15px auto;
+        display: none; /*Cacher toutes les étapes par défaut*/
+        &.active{
+            display: block;
+            animation: anim 0.4s ease-in;
+        }
+    }
+    .step-indicators{
+        display: flex;
+        justify-content: space-between;
+        .indicator{
+            width: 20px;
+            height: 20px;
+            background: #eee;
+            color: #666;
+            font-weight: 600;
+            border-radius: 50%;
+            text-align: center;
+            transition: .6s;
+            &.active{
+                background: #2b8af7;
+                color: #fff;
+                box-shadow: 0px 0px 5px rgb(151, 201, 224);
+                transform: scale(1.2, 1.2);
+            }
+        }
+    }
+}
+@keyframes anim{
+    0%{
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -62,6 +62,8 @@
     <section class="add_house container">
         <div>
             <form action="#" class="multi-steps py-4">
+                <div id="indicators" class="step-indicators col-lg-5 mx-auto">
+                </div>
                 <div class="steps-container">
                     <fieldset id="first-step" class="step col-lg-5">
                         <h5 class="step-title">Inscrivez votre maison sur Inzu</h5>
@@ -245,16 +247,30 @@
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset id="last-step" class="step col-lg-5">
+                    <fieldset id="last-step" class="step col-lg-6">
                         <h5 class="step-title">Montrez-nous votre maison</h5>
                         <div class="flex-bloc">
                             <h6 class="text-center my-3">Ajoutez des photos ici</h6>
                             <div class="gallery-container m-auto col-lg-10">
-                                <ul class="image-list">
-                                    <li class="main-img image-item">
+                                <ul class="image-list row">
+                                    <li class="main-img image-item col-12">
                                         <input type="file" name="" id="">
                                         <span class="text">
-                                            <i class="fas fa-file-download    "></i>
+                                            <i class="fas fa-file-download" accept="image/jpg, image/png"></i>
+                                            <p>Cliquez ou glisser une photo ici pour l'ajouter</p>
+                                        </span>
+                                    </li>
+                                    <li class="image-item col-6">
+                                        <input type="file" name="" id="">
+                                        <span class="text">
+                                            <i class="fas fa-file-download" accept="image/jpg, image/png"></i>
+                                            <p>Cliquez ou glisser une photo ici pour l'ajouter</p>
+                                        </span>
+                                    </li>
+                                    <li class="image-item col-6">
+                                        <input type="file" name="" id="">
+                                        <span class="text">
+                                            <i class="fas fa-file-download" accept="image/jpg, image/png"></i>
                                             <p>Cliquez ou glisser une photo ici pour l'ajouter</p>
                                         </span>
                                     </li>

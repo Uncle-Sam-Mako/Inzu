@@ -103,8 +103,13 @@
                 justify-content: center;
                 border: 1px dashed #eee;
                 width: 100%;
-                height: 250px;
+                height: 150px;
                 position: relative;
+                font-size: small;
+                &.main-img{
+                    height: 250px;
+                    margin: 5px 0;
+                }
                 .text{
                     text-align: center;
                     i{
