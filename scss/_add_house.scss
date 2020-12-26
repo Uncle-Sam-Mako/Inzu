@@ -96,33 +96,67 @@
         }
     }
     #last-step{
-        .image-list{
-            li.image-item{
+        .loader-input-list{
+            li{
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
+                padding: 0;
+                border-radius: 7px;
                 border: 1px dashed #eee;
-                width: 100%;
-                height: 150px;
+                width: 450px;
+                height: 250px;
                 position: relative;
                 font-size: small;
-                &.main-img{
-                    height: 250px;
-                    margin: 5px 0;
-                }
-                .text{
-                    text-align: center;
-                    i{
-                        font-size: 2.5em;
-                    }
-                }
-                input{
+                overflow: hidden;
+                .default-text,
+                .preview-image,
+                input
+                {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    opacity: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     width: 100%;
                     height: 100%;
+                }
+                .default-text{
+                    flex-direction: column;
+                    span{
+                        margin: 5px 0;
+                        &.download-icon {
+                            font-size: 2.5em;
+                        }
+                    }
+                }
+                .preview-image img[src=""]{
+                    visibility: hidden;
+                }
+                input{
+                    opacity: 0;
+                }
+                .cancel-btn{
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    z-index: 99;
+                    display: none;
+                    button{
+                        background: rgba(0, 0, 0, 0.3);
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid rgba(238, 238, 238, 0.212);
+                        border-radius: 50%;
+                        color: #fff;
+                    }
+                }
+                &.filled{
+                    .cancel-btn{
+                        display: block;
+                    }
                 }
             }
         }

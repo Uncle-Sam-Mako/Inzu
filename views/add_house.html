@@ -251,28 +251,20 @@
                         <h5 class="step-title">Montrez-nous votre maison</h5>
                         <div class="flex-bloc">
                             <h6 class="text-center my-3">Ajoutez des photos ici</h6>
-                            <div class="gallery-container m-auto col-lg-10">
-                                <ul class="image-list row">
-                                    <li class="main-img image-item col-12">
-                                        <input type="file" name="" id="">
-                                        <span class="text">
-                                            <i class="fas fa-file-download" accept="image/jpg, image/png"></i>
-                                            <p>Cliquez ou glisser une photo ici pour l'ajouter</p>
-                                        </span>
-                                    </li>
-                                    <li class="image-item col-6">
-                                        <input type="file" name="" id="">
-                                        <span class="text">
-                                            <i class="fas fa-file-download" accept="image/jpg, image/png"></i>
-                                            <p>Cliquez ou glisser une photo ici pour l'ajouter</p>
-                                        </span>
-                                    </li>
-                                    <li class="image-item col-6">
-                                        <input type="file" name="" id="">
-                                        <span class="text">
-                                            <i class="fas fa-file-download" accept="image/jpg, image/png"></i>
-                                            <p>Cliquez ou glisser une photo ici pour l'ajouter</p>
-                                        </span>
+                            <div class="loader-inputs-container m-auto col-lg-10">
+                                <ul class="loader-input-list row">
+                                    <li class="main-img loader-input-item col-12" data-preview="#house-img">
+                                        <div class="default-text">
+                                            <span class="download-icon fas fa-file-download"></span>
+                                            <span>Cliquez ou glisser une photo ici pour l'ajouter</span>
+                                        </div>
+                                        <div class="preview-image">
+                                            <img src="" alt="">
+                                        </div>
+                                        <div class="cancel-btn">
+                                            <button class="fas fa-times    "></button>
+                                        </div>
+                                        <input class="file-input" type="file" name="house-img" id="house-img">
                                     </li>
                                 </ul>
                             </div>

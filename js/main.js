@@ -76,3 +76,47 @@ $(window).click(function(){
 $(opener).click(function(e){
     e.stopPropagation();
 })
+
+//Loader-house-image
+
+let fileInput = document.querySelectorAll('.file-input');
+fileInput.forEach(curInput => {
+    curInput.addEventListener('change', function(){
+        const parentOf = document.querySelector('li[data-preview="#' + curInput.getAttribute('id') + '"]');
+        const imageBox = parentOf.querySelector('img');
+        const cancelBtn = parentOf.querySelector('.cancel-btn');
+        const file = curInput.files[0];
+        if(file){
+            parentOf.classList.add("filled");
+            const reader = new FileReader();
+            reader.onload = function(){
+                const result = reader.result;
+                imageBox.src = result;
+            }
+            reader.readAsDataURL(file);
+        }
+        cancelBtn.addEventListener("click", function(){
+            parentOf.classList.remove("filled");
+            imageBox.src = "";
+            
+        })
+    })
+})
+// .addEventListener('change', function(){
+//     const parentOf = document.querySelector('li[data-preview=#' + file.getAttribute('id') + ']');
+// 	const file = this.files[0];
+// 	if(file){
+// 		const reader = new FileReader();
+// 		reader.onload = function(){
+// 			const result = reader.result;
+// 			img.src = result;
+// 			document.querySelector('.wrapper').classList.add('filled');
+// 		}
+// 		reader.readAsDataURL(file);
+// 	}
+// 	if(this.value){
+// 		let valueStore = this.value.match(regExp);
+// 		fileName.textContent = valueStore;
+
+// 	}
+// }); 
