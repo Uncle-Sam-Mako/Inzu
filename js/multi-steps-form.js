@@ -1,4 +1,4 @@
-let currentStep = 0,
+let currentStep = 3,
 form = document.querySelector('.multi-steps'),
 prevBtn = document.getElementById("prevStepBtn"),nextBtn = document.getElementById("nextStepBtn"),
 steps = document.querySelectorAll('.multi-steps .step'),
@@ -41,7 +41,7 @@ function createIndicators(){
         elt.className = "indicator";
         elt.innerHTML = i+1;
         indicatorsContainer.appendChild(elt);
-        if(i==0) elt.classList.add('active');
+        if(i==currentStep) elt.classList.add('active');
     }
 }
 function changeIndicator(n){
