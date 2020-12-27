@@ -120,6 +120,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    text-align: center;
                     width: 100%;
                     height: 100%;
                 }
@@ -153,8 +154,34 @@
                         color: #fff;
                     }
                 }
+                .file-error{
+                    position: absolute;
+                    bottom: 0;
+                    color: #ff3d3d;
+                    p{
+                        display: none;
+                    }
+                    &.type{
+                        .type-error{
+                            display: block;
+                        }
+                    }
+                    &.size{
+                        .size-error{
+                            display: block;
+                        }
+                    }
+                }
                 &.filled{
                     .cancel-btn{
+                        display: block;
+                    }
+                    .default-text{
+                        visibility: hidden;
+                    }
+                }
+                &.hasError{
+                    .file-error{
                         display: block;
                     }
                 }

@@ -87,13 +87,28 @@ fileInput.forEach(curInput => {
         const cancelBtn = parentOf.querySelector('.cancel-btn');
         const file = curInput.files[0];
         if(file){
-            parentOf.classList.add("filled");
-            const reader = new FileReader();
-            reader.onload = function(){
-                const result = reader.result;
-                imageBox.src = result;
+            parentOf.classList.remove("hasError");
+            parentOf.querySelector('.file-error').classList.remove("type");
+            parentOf.querySelector('.file-error').classList.remove("size");
+            if(!validFile(file)){
+                parentOf.classList.add("filled");
+                const reader = new FileReader();
+                reader.onload = function(){
+                    const result = reader.result;
+                    imageBox.src = result;
+                }
+                reader.readAsDataURL(file);
+            }else{
+                curInput.value = "";
+                parentOf.classList.remove("filled");
+                imageBox.src = "";
+                if(validFile(file)==1){
+                    parentOf.querySelector('.file-error').classList.add("type");
+                }else{
+                    parentOf.querySelector('.file-error').classList.add("size");
+                }
             }
-            reader.readAsDataURL(file);
+            console.log(validFile(file));
         }
         cancelBtn.addEventListener("click", function(){
             parentOf.classList.remove("filled");
@@ -102,21 +117,17 @@ fileInput.forEach(curInput => {
         })
     })
 })
-// .addEventListener('change', function(){
-//     const parentOf = document.querySelector('li[data-preview=#' + file.getAttribute('id') + ']');
-// 	const file = this.files[0];
-// 	if(file){
-// 		const reader = new FileReader();
-// 		reader.onload = function(){
-// 			const result = reader.result;
-// 			img.src = result;
-// 			document.querySelector('.wrapper').classList.add('filled');
-// 		}
-// 		reader.readAsDataURL(file);
-// 	}
-// 	if(this.value){
-// 		let valueStore = this.value.match(regExp);
-// 		fileName.textContent = valueStore;
 
-// 	}
-// }); 
+function validFile(file){
+    let validTypeFile = [
+        'image/jpeg',
+        'image/png',
+        'image/pjpeg'
+    ]
+    for(let i = 0, c = validTypeFile.length; i<c; i++){
+        if(file.type === validTypeFile[i]){
+            return (file.size > 2097152) ? 2 : 0;
+        }
+    }
+    return 1;
+}
