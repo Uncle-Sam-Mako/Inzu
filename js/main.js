@@ -87,7 +87,6 @@ fileInput.forEach(curInput => {
         const cancelBtn = parentOf.querySelector('.cancel-btn');
         const file = curInput.files[0];
         if(file){
-            parentOf.classList.remove("hasError");
             parentOf.querySelector('.file-error').classList.remove("type");
             parentOf.querySelector('.file-error').classList.remove("size");
             if(!validFile(file)){
@@ -111,9 +110,9 @@ fileInput.forEach(curInput => {
             console.log(validFile(file));
         }
         cancelBtn.addEventListener("click", function(){
+            curInput.value = "";
             parentOf.classList.remove("filled");
             imageBox.src = "";
-            
         })
     })
 })
@@ -126,7 +125,7 @@ function validFile(file){
     ]
     for(let i = 0, c = validTypeFile.length; i<c; i++){
         if(file.type === validTypeFile[i]){
-            return (file.size > 2097152) ? 2 : 0;
+            return (file.size > 5242880) ? 2 : 0;
         }
     }
     return 1;
