@@ -1,6 +1,7 @@
 
 @import './variables';
 .add_house{
+    position: relative;
     .step-title{
         font-weight: 900;
         text-align: center;
@@ -154,24 +155,6 @@
                         color: #fff;
                     }
                 }
-                .file-error{
-                    position: absolute;
-                    bottom: 0;
-                    color: #ff3d3d;
-                    p{
-                        display: none;
-                    }
-                    &.type{
-                        .type-error{
-                            display: block;
-                        }
-                    }
-                    &.size{
-                        .size-error{
-                            display: block;
-                        }
-                    }
-                }
                 &.filled{
                     .cancel-btn{
                         display: block;
@@ -201,6 +184,39 @@
                 color: #00b144;
                 margin-bottom: 20px;
             }
+        }
+    }
+}
+#file-error{
+    position: fixed;
+    bottom: calc(0% + 20px);
+    left: 20px;
+    padding: 10px;
+    background: #ffcfcf;
+    border-radius: 7px;
+    border: 1px solid #ff7f7f;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.062);
+    font-size: small;
+    transform: translateY(30%);
+    opacity: 0;
+    transition: .5s;
+    //color: #ff3d3d;
+    p{
+        display: none;
+        margin: 0;
+    }
+    &.error{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    &.type{
+        .type-error{
+            display: block;
+        }
+    }
+    &.size{
+        .size-error{
+            display: block;
         }
     }
 }

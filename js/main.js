@@ -87,8 +87,9 @@ fileInput.forEach(curInput => {
         const cancelBtn = parentOf.querySelector('.cancel-btn');
         const file = curInput.files[0];
         if(file){
-            parentOf.querySelector('.file-error').classList.remove("type");
-            parentOf.querySelector('.file-error').classList.remove("size");
+            document.querySelector('#file-error').classList.remove("type");
+            document.querySelector('#file-error').classList.remove("size");
+            document.querySelector('#file-error').classList.remove("error");
             if(!validFile(file)){
                 parentOf.classList.add("filled");
                 const reader = new FileReader();
@@ -102,12 +103,12 @@ fileInput.forEach(curInput => {
                 parentOf.classList.remove("filled");
                 imageBox.src = "";
                 if(validFile(file)==1){
-                    parentOf.querySelector('.file-error').classList.add("type");
+                    document.querySelector('#file-error').classList.add("type");
                 }else{
-                    parentOf.querySelector('.file-error').classList.add("size");
+                    document.querySelector('#file-error').classList.add("size");
                 }
+                document.querySelector('#file-error').classList.add("error");
             }
-            console.log(validFile(file));
         }
         cancelBtn.addEventListener("click", function(){
             curInput.value = "";
@@ -117,6 +118,9 @@ fileInput.forEach(curInput => {
     })
 })
 
+function setParent(){
+
+}
 function validFile(file){
     let validTypeFile = [
         'image/jpeg',
@@ -125,7 +129,7 @@ function validFile(file){
     ]
     for(let i = 0, c = validTypeFile.length; i<c; i++){
         if(file.type === validTypeFile[i]){
-            return (file.size > 5242880) ? 2 : 0;
+            return (file.size > 2097152) ? 2 : 0;
         }
     }
     return 1;
