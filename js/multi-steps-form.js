@@ -1,4 +1,4 @@
-let currentStep = 3,
+let currentStep = 0,
 form = document.querySelector('.multi-steps'),
 prevBtn = document.getElementById("prevStepBtn"),nextBtn = document.getElementById("nextStepBtn"),
 steps = document.querySelectorAll('.multi-steps .step'),
@@ -22,14 +22,14 @@ function showStep(n){
     }else{
         nextBtn.innerHTML = "Suivant";
     }
-}
-function nextPrev(n){
-    steps[currentStep].classList.remove('active');
-    currentStep = currentStep + n;
     if(currentStep == steps.length) {
         form.submit();
         return false;
     }
+}
+function nextPrev(n){
+    steps[currentStep].classList.remove('active');
+    currentStep = currentStep + n;
     changeIndicator(currentStep);
     showStep(currentStep);
     return false;
@@ -57,10 +57,6 @@ indicators.forEach(a => {
         let index = Array.from(indicators).findIndex(f => f === a);
         steps[currentStep].classList.remove('active');
         currentStep = index;
-        if(currentStep == steps.length) {
-            form.submit();
-            return false;
-        }
         changeIndicator(currentStep);
         showStep(currentStep);
         return false;
