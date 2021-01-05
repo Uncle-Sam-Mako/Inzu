@@ -79,30 +79,24 @@ $(opener).click(function(e){
 
 //Loader-house-image
 
-let fileInput = document.querySelectorAll('.file-input');
-fileInput.forEach(curInput => {
-    curInput.addEventListener('change', function(){
-        const parentOf = document.querySelector('li[data-preview="#' + curInput.getAttribute('id') + '"]');
-        const imageBox = parentOf.querySelector('img');
-        const cancelBtn = parentOf.querySelector('.cancel-btn');
-        const file = curInput.files[0];
-        if(file){
+let fileInput = document.getElementById('house-img'),
+imgContainer = document.querySelector('.loader-input-list');
+fileInput.addEventListener('change', function(){
+    let file = fileInput.files;
+    for(let i = 0, c = file.length; i<c; i++){
+        if(file[i]){
             document.querySelector('#file-error').classList.remove("type");
             document.querySelector('#file-error').classList.remove("size");
             document.querySelector('#file-error').classList.remove("error");
-            if(!validFile(file)){
-                parentOf.classList.add("filled");
+            if(!validFile(file[i])){
                 const reader = new FileReader();
                 reader.onload = function(){
                     const result = reader.result;
-                    imageBox.src = result;
+                    imgContainer.appendChild(createPreview(result));
                 }
-                reader.readAsDataURL(file);
+                reader.readAsDataURL(file[i]);
             }else{
-                curInput.value = "";
-                parentOf.classList.remove("filled");
-                imageBox.src = "";
-                if(validFile(file)==1){
+                if(validFile(file[i])==1){
                     document.querySelector('#file-error').classList.add("type");
                 }else{
                     document.querySelector('#file-error').classList.add("size");
@@ -110,16 +104,20 @@ fileInput.forEach(curInput => {
                 document.querySelector('#file-error').classList.add("error");
             }
         }
-        cancelBtn.addEventListener("click", function(){
-            curInput.value = "";
-            parentOf.classList.remove("filled");
-            imageBox.src = "";
-        })
-    })
-})
+    }
+    console.log(files);
+});
+document.querySelectorAll('.preview-img').forEach(li => {
+    li.addEventListener('click', function(){
+        alert('hello');
+    });
+});
 
-function setParent(){
-
+function createPreview(url){
+    let preview = document.querySelector('.preview-img').cloneNode(true);
+    preview.querySelector('img').src = url;
+    preview.removeAttribute('hidden')
+    return preview;
 }
 function validFile(file){
     let validTypeFile = [

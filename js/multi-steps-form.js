@@ -51,7 +51,18 @@ function changeIndicator(n){
     currentIndicator = indicators[n];
     currentIndicator.classList.add('active');
 }
-// let indicators = indicatorsContainer.querySelectorAll('.indicator');
-// indicators.forEach(a => {
-//     a.addEventListener('click', console.log("hello"))
-// })
+let indicators = indicatorsContainer.querySelectorAll('.indicator');
+indicators.forEach(a => {
+    a.addEventListener('click', function(){
+        let index = Array.from(indicators).findIndex(f => f === a);
+        steps[currentStep].classList.remove('active');
+        currentStep = index;
+        if(currentStep == steps.length) {
+            form.submit();
+            return false;
+        }
+        changeIndicator(currentStep);
+        showStep(currentStep);
+        return false;
+    })
+})
