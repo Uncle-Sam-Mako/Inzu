@@ -27,7 +27,7 @@ const semiFixed = $(function() {
     });
 });
 
-//Shoz and mask password
+//Show and mask password
 const showPass = function(){
     let input = $('#password');
     input.attr("type", "text");
@@ -46,7 +46,7 @@ const loginOptions = $(function() {
 
 //Open popups
 let openedPopup = null;
-let opener = null;
+let opener = null; /* Declencheur du popup */
 let openPopup = function(e){
     e.preventDefault();
     if(openedPopup !== null) openedPopup.setAttribute('data-hidden', true);
@@ -55,27 +55,27 @@ let openPopup = function(e){
     openedPopup.setAttribute('data-hidden', false);
     
 }
-let closePopup = function(e){
-    if(openedPopup===null) return;
-    //e.preventDefault();
-    openedPopup.setAttribute("data-hidden", true);
-    //opener.RemoveEventListener("click", openPopup);
-    $(window).click(function(){
-        if(openedPopup!==null && opener!==null) closePopup();
-    })
-    openedPopup = null;
-    opener = null;
-}
+// let closePopup = function(e){
+//     if(openedPopup===null) return;
+//     //e.preventDefault();
+//     openedPopup.setAttribute("data-hidden", true);
+//     //opener.RemoveEventListener("click", openPopup);
+//     $(window).click(function(){
+//         if(openedPopup!==null && opener!==null) closePopup();
+//     })
+//     openedPopup = null;
+//     opener = null;
+// }
 let popupOpeners = Array.from(document.querySelectorAll(".openPopup"));
     popupOpeners.forEach(opener => {
     opener.addEventListener("click", openPopup);
 });
-$(window).click(function(){
-    if(openedPopup!==null && opener!==null) closePopup();
-})
-$(opener).click(function(e){
-    e.stopPropagation();
-})
+// $(window).click(function(){
+//     if(openedPopup!==null && opener!==null) closePopup();
+// })
+// $(opener).click(function(e){
+//     e.stopPropagation();
+// })
 
 //Loader-house-image
 

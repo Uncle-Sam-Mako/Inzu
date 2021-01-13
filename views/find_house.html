@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../fontawesome-free-5.15.1-web/css/all.min.css">
     <link rel="stylesheet" href="../splide-2.4.12/dist/css/splide.min.css">
     <link rel="stylesheet" href="../bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../MedeaJS/dist/css/medea.css">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <style>
@@ -62,8 +63,9 @@
     <section class="find_house_main_section">
         <div class="filter-section">
             <div class="filter-nav container-fluid">
-                <span class="input-box search-town">
+                <span class="input-box grid search-town">
                     <input type="text" placeholder="Ville, Région">
+                    <button class="fa fa-search"></button>
                 </span>
                 <div class="full-w">
                     <div class="filter-container">
@@ -172,14 +174,111 @@
                                     </form>
                                  </div>
                             </li>
+                            <li class="filter-action-btn more-filter-btn">
+                                <button  data-modal="#modal1" class="js-modal-open">Plus</button>
+                            </li>
+                            <li class="filter-action-btn invisible-lg mobile-filter-btn">
+                                <button data-modal="#modal1" class="js-modal-open"><i class="fas fa-filter"></i> Filtres</button>
+                            </li>
                         </ul>
-                        <div class="action-btn">
-                            <button id="more-more" class="btn btn-wow reverse">Plus</button>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <aside id="modal1" class="modal more-filter-modal" aria-hidden="true" role="dialog" aria-modal="false" style="display: none;">
+            <div class="modal-wrapper col-lg-5" aria-labelledby="">
+                <button class="js-modal-close"><img src="../MedeaJS/src/assets/svg/times.svg" alt="" srcset=""></button>
+                <div class="more-filter-container">
+                    <form action="">
+                        <div class="filter-item">
+                            <label for="min-pieces">Type</label>
+                            <span class="input-box">
+                                <input type="text" name="area" min="1" id="min-pieces" placeholder="N'importe">
+                            </span>
+                        </div>
+                        <div class="filter-item">
+                            <label for="min-price">Prix</label>
+                            <span class="input-box">
+                                <input type="number" name="price" min="10" id="min-pieces" placeholder="Prix Min">
+                            </span>
+                            <span class="input-box">
+                                <input type="number" name="price" min="10" id="max-pieces" placeholder="Prix Max">
+                            </span>
+                        </div>
+                        <div class="filter-item">
+                            <label for="min-price">Surface</label>
+                            <span class="input-box">
+                                <input type="number" name="area" min="100" id="min-pieces" placeholder="Surf Min">
+                            </span>
+                            <span class="input-box">
+                                <input type="number" name="area" min="100" id="max-pieces" placeholder="Surf Max">
+                            </span>
+                        </div>
+                        <div class="filter-item">
+                            <label for="min-pieces">Pièces</label>
+                            <span class="input-box">
+                                <input type="number" name="area" min="1" id="min-pieces" placeholder="Nb Min">
+                            </span>
+                            <span class="input-box">
+                                <input type="number" name="area" min="1" id="max-pieces" placeholder="Nb Max">
+                            </span>
+                        </div>
+                        <div class="filter-item">
+                            <label for="min-pieces">Chambres</label>
+                            <span class="input-box">
+                                <input type="number" name="area" min="1" id="min-pieces" placeholder="Nb Min">
+                            </span>
+                            <span class="input-box">
+                                <input type="number" name="area" min="1" id="max-pieces" placeholder="Nb Max">
+                            </span>
+                        </div>
+                        <div class="filter-item">
+                            <label for="min-bath-room">Salle(s) de bain</label>
+                            <span class="input-box">
+                                <input type="number" name="area" min="1" id="min-bath-room" placeholder="Nb Min">
+                            </span>
+                            <span class="input-box">
+                                <input type="number" name="area" min="1" id="max-bath-room" placeholder="Nb Max">
+                            </span>
+                        </div>
+                        <div class="filter-item hasList">
+                            <label for="min-bath-room">Doit avoir :</label>
+                            <span>
+                                <ul class="details-list">
+                                    <li class="detail-item">
+                                        <input class="check-wow" type="checkbox" name="garden" id="garden">
+                                        <label for="garden">Jardin</label>
+                                    </li>
+                                    <li class="detail-item">
+                                        <input class="check-wow" type="checkbox"
+                                        name="garage" id="garage">
+                                        <label for="garage">Garage</label>
+                                    </li>
+                                    <li class="detail-item">
+                                        <input class="check-wow" type="checkbox" name="pool" id="pool">
+                                        <label for="pool">Piscine</label>
+                                    </li>
+                                    <li class="detail-item">
+                                        <input class="check-wow" type="checkbox" name="terrasse" id="terrasse">
+                                        <label for="terrasse">Terrasse</label>
+                                    </li>
+                                    <li class="detail-item">
+                                        <input class="check-wow" type="checkbox" name="wash-room" id="wash-room">
+                                        <label for="wash-room">Buanderie</label>
+                                    </li>
+                                </ul>
+                            </span>
+                        </div>
+                        <div class="filter-item">
+                            <label for="min-bath-room">Mots clés</label>
+                            <span class="input-box">
+                                <input type="text" name="area" min="1" id="min-bath-room" placeholder="ex : Terrasse, Etage, Rivière, Parc, etc">
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </aside>
         <div class="find-section py-3">
             <div class="container">
                 <div class="">
@@ -621,6 +720,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/carousel.js"></script>
+    <script src="../MedeaJS/dist/js/medea.js"></script>
     <script>
         // let boxInfo = null;
         // document.querySelectorAll(".more-info-shower").forEach(a => {

@@ -5,14 +5,18 @@
     width: 100%;
     min-height: 60px;
     background: #f3f3f3;
-    display: flex;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
     align-items: center;
     .filter-list{
         margin: 0;
+        display: flex;
         li{
             display: inline-block;
             position: relative;
+            margin: 0 10px;
             button{
+                width: 100%;
                 display: block;
                 background: #fff;
                 margin: 5px 3px;
@@ -23,6 +27,10 @@
                 font-size: .9em;
                 min-width: 100px;
                 color: #666;
+                &.js-modal-open{
+                    background: #2b8af7;
+                    color: #fff;
+                }
             }
             @keyframes fadeIn {
                 from{
@@ -147,6 +155,41 @@
     .houses-side{
         .house-item{
             margin: 10px 0;
+        }
+    }
+}
+.more-filter-modal{
+    .more-filter-container{
+        .filter-item{
+            display: grid;
+            grid-template-columns: 30% 1fr 1fr;
+            align-items: center;
+            margin: 10px 0;
+            width: 100%;
+            &>label{
+                font-weight: bold;
+            }
+            // &>span{
+            //    width: 60%;
+            // }
+            &.hasList{
+                align-items: flex-start;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .filter-nav{
+        grid-template-columns: 1fr 1fr;
+        .filter-list{
+            // Tous les boutons qui n'ont pas la classe .invisible-lg seront invisibles sur mobile
+            li:not(.invisible-lg){
+                display: none;
+            }
+            // Le bouton qui filtre sur les mobiles
+            .mobile-filter-btn{
+                margin-left: auto;
+            }
         }
     }
 }
