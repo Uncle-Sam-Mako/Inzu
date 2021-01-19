@@ -113,6 +113,8 @@ header {
     align-items: center;
     img{
         border-radius: 10px;
+        height: 100%;
+        object-fit: cover;
     }
     .text{
         color:#666;

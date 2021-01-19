@@ -499,6 +499,7 @@
                 }
             }
         }
+        /*Invisible pour les pétits écrans*/
         .invisible-sm {
             display: none !important;
         }
@@ -521,12 +522,20 @@
             justify-content: space-between;
             align-items: center;
         }
+        /*Invisible pour écran large*/
         .invisible-lg {
+            display: none !important;
+        }
+    }
+    @media (min-width: 768px) {
+        /*Invisible pour écran moyen*/
+        .invisible-md {
             display: none !important;
         }
     }
     
     @media (max-width: 680px) {
+        /*Bloc au milieu d'une page grise*/
         .flex-bloc{
             padding: 20px 25px;
         }   
