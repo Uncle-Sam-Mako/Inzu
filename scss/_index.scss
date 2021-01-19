@@ -72,13 +72,14 @@ header {
 
 .advantages{
     min-height: 400px;
-    background: #fff;
+    background: #f7f7f7;
     h5{
         color: #ffb400;
         text-transform: uppercase;
         font-weight: bold;
     }
     .advantages-item{
+        margin: 10px 0;
         h5{
             text-transform: initial;
         }
@@ -97,26 +98,32 @@ header {
                 background: #008cff2c;
             }
             svg{
-                width: 60px;
-                fill: #0073a8;
+                width: 50px;
+                fill: #008eb3;
+                margin-bottom: 20px;
             }
         }
     }
 }
 .announce-banner{
     min-height: 400px;
-    background: #eee;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    img{
+        border-radius: 10px;
+    }
     .text{
         color:#666;
-        h3{
-            font-weight: bold;
+        height: max-content;
+        align-self: center;
+        h4{
+            font-weight: 900;
+            margin-bottom: 10px;
         }
         p{
-            line-height: .5em;
+            
         }
     }
 }
