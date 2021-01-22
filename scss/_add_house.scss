@@ -13,7 +13,7 @@
         font-weight: 600;
     }
     .small-info{
-        background: #f5f5f5;
+        background: darken($color-primary, 4%);
         padding: 10px;
         font-size: smaller;
         border-radius: 5px;
@@ -34,6 +34,7 @@
     }
     #second-step{
         .house-type-bloc{
+            /*----Type de maison -----*/
             input[type="radio"]{
                 display: none;
             }
@@ -43,7 +44,7 @@
                 padding: 10px;
                 text-align: center;
                 margin: 5px auto;
-                border: 1px dashed #eee;
+                border: 1px dashed darken($color-primary, 5%);
                 border-radius: 5px;
                 transition: .5s;
                 padding-left: 15px;
@@ -61,23 +62,23 @@
                     position: absolute;
                     top: 0px;
                     left: 5px;
-                    background: #fff;
-                    border: 2px solid #f5f5f5;
+                    background: $color-primary;
+                    border: 2px solid darken($color-primary, 4%);
                     border-radius: 3px;
                     width: 15px;
                     height: 15px;
                     font-size: 10px;
-                    color: #fff;
+                    color: $color-primary;
                     i{
                         visibility: hidden;
                     }
                 }
                 input:checked + label{
-                    background: #f1f7ff;
-                    border: 1px solid #008cff;
+                    background: mix($color-primary, $color-one, 90%);
+                    border: 1px solid $color-one;
                     & + .check{
-                        border-color: #008cff;
-                        background: #008cff;
+                        border-color: $color-one;
+                        background: $color-one;
                         i{
                             visibility: visible;
                         }
@@ -106,7 +107,7 @@
                 padding: 0;
                 margin: 5px 0;
                 border-radius: 7px;
-                border: 1px dashed #eee;
+                border: 1px dashed darken($color-primary, 5%);
                 width: 450px;
                 height: 250px;
                 position: relative;
@@ -153,7 +154,7 @@
                         height: 30px;
                         border: 1px solid rgba(238, 238, 238, 0.212);
                         border-radius: 50%;
-                        color: #fff;
+                        color: $color-primary;
                     }
                 }
                 &.filled{
@@ -196,7 +197,7 @@
     background: #ffcfcf;
     border-radius: 7px;
     border: 1px solid #ff7f7f;
-    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.062);
+    box-shadow: 0px 0px 5px 3px $color-shadow;
     font-size: small;
     transform: translateY(30%);
     opacity: 0;
@@ -218,13 +219,6 @@
     &.size{
         .size-error{
             display: block;
-        }
-    }
-}
-@media (max-width: 680px) {
-    #second-step{
-        label{
-            //width: 60% !important;
         }
     }
 }

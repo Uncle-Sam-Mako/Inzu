@@ -10,10 +10,10 @@
             &:first-child{
                 font-weight: bold;
                 font-size: 2em;
-                color: rgb(161, 161, 161);
+                color: lighten($inzu-text, 20%);
             }
             &:last-child{
-                color: #666;
+                color: $inzu-text;
             }
         }
     }

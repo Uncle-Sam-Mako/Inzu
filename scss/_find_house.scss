@@ -4,7 +4,7 @@
 .filter-nav{
     width: 100%;
     min-height: 60px;
-    background: #f3f3f3;
+    background: darken($color-primary, 5%);
     display: grid;
     grid-template-columns: 3fr 7fr;
     align-items: center;
@@ -19,18 +19,18 @@
             button{
                 width: 100%;
                 display: block;
-                background: #fff;
+                background: $color-primary;
                 margin: 5px 3px;
                 padding: 8px 20px;
                 text-align: center;
-                border: 1px solid #ddd;
+                border: 1px solid darken($color-primary, 15%);
                 border-radius: 5px;
                 font-size: .9em;
                 min-width: 100px;
-                color: #666;
+                color: $inzu-text;
                 &.js-modal-open{
-                    background: #2b8af7;
-                    color: #fff;
+                    background: $color-one;
+                    color: $color-primary;
                 }
             }
             @keyframes fadeIn {
@@ -47,9 +47,9 @@
                 position: absolute;
                 z-index: 9;
                 min-width: 300px;
-                background: #fff;
+                background: $color-primary;
                 border-radius: 10px;
-                box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.123);
+                box-shadow: 0 0 10px 1px $color-shadow;
                 padding: 10px;
                 opacity: 1;
                 animation: fadeIn 0.3s ease-in;
@@ -68,21 +68,21 @@
                     label{
                         min-width: 50px;
                         text-align: center;
-                        background: #f5f5f5;
+                        background: darken($color-primary, 4%);
                         padding: 8px 5px;
                         margin: 0 1px;
                         transition: .6s;
                         cursor: pointer;
                         &:hover{
-                            background: #eee;
+                            background: darken($color-primary, 5%);
                         }
                     }
                     input{
                         display: none;
                         &:checked{
                             &+label{
-                                background: #ffb400;
-                                color: #fff;
+                                background: $color-two;
+                                color: $color-primary;
                             }
                         }
                     }
@@ -98,18 +98,18 @@
 }
 
 .view-mode-change{
-	background: #f5f5f5;
+	background: darken($color-primary, 4%);
 	height: max-content;
 	border-radius: 25px;
 	padding: 3px;
     position: relative;
     width: max-content;
-    border: 1px solid #eee;
-    color: #666;
+    border: 1px solid darken($color-primary, 5%);
+    color: $inzu-text;
     input{
         display: none;
         &:checked + label{
-            color: #fff;
+            color: $color-primary;
         } 
     }
     label{
@@ -131,10 +131,10 @@
             right : 0;
             padding: 10px 15px;
             border-radius: 20px;
-            background: #ffb400;
+            background: $color-two;
             transition: transform .3s;
             visibility: hidden;
-            box-shadow: 0px 0px 10px #d6d6d6;
+            box-shadow: 0px 0px 5px darken($color-shadow, 10%);
         }
     }
     #view-mode-map + label::before{

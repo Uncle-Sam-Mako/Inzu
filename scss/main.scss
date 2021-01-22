@@ -44,7 +44,7 @@
     html,
     body {
         font-size: 15px;
-        color: #666;
+        color: $inzu-text;
         height: 100%;
         font-family: 'Proxima Nova Rg' !important;
     }
@@ -53,9 +53,9 @@
     a:active {
         text-decoration: none !important;
         &.link{
-            color: #666;
+            color: $inzu-text;
             &:hover{
-                color: #555;
+                color: darken($inzu-text, 5%);
             }
         }
     }
@@ -63,7 +63,7 @@
         &::-webkit-scrollbar{
             width: 10px;
             border-radius: 10px;
-            background-color: #eee; 
+            background-color: darken($color-primary, 5%); 
             padding: 0 2px;
         }
         &::-webkit-scrollbar-thumb {
@@ -74,15 +74,15 @@
     body{
         &.marged{
             padding-top: 80px;
-            background: #fafafa;
+            background: darken($color-primary, 3%);
         }
         &.no-scroll{
             overflow: hidden;
         }
     }
     .flex-bloc{
-        background: #fff;
-        border: 1px solid #eee;
+        background: $color-primary;
+        border: 1px solid darken($color-primary, 5%);
         border-radius: 10px;
         padding: 20px 35px;
         box-shadow: 0px 0px 20px #f3f3f3;
@@ -97,50 +97,49 @@
     .btn {
         @include transition();
         &.btn-wow {
-            background: #fff;
-            color: #2b8af7;
-            box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.151);
+            background: $color-primary;
+            color: $color-one;
+            box-shadow: 0px 0px 10px 1px $color-shadow;
             &:hover {
-                background: #2b8af7;
-                color: #fff;
+                background: $color-one;
+                color: $color-primary;
             }
             &.reverse{
-                background: #2b8af7;
-                color: #fff;
+                background: $color-one;
+                color: $color-primary;
                 &:hover{
-                    background: #fff;
-                    color: #2b8af7;
+                    background: $color-primary;
+                    color: $color-one;
                 }
             }
         }
         &.btn-blind {
-            background: linear-gradient(#ffb400, #ff9305);
-            color: #fff;
+            background: linear-gradient($color-two, mix($color-two, red, 70%));
+            color: $color-primary;
             font-weight: bold;
             display: block;
             padding: 6px 20px;
             border-radius: 5px;
             &:hover {
-                color: white;
-                background:#ffb400;
+                color: transparentize($color-primary, .3);
             }
         }
         &.btn-bw{
             font-size: small;
-            border: 1px solid #666;
-            color: #666;
+            border: 1px solid $inzu-text;
+            color: $inzu-text;
             padding: 3px 15px;
             &:hover {
-                border: 1px solid #008cff;
-                color: #008cff;
+                border: 1px solid $color-one;
+                color: $color-one;
             }
         }
     }
     //SplideJs
 
     .splide__arrow{
-        background: #fff;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.527);
+        background: $color-primary;
+        box-shadow: 0px 0px 10px $color-shadow;
         opacity: 0.6;
         svg{
             width: .9em;
@@ -149,8 +148,15 @@
     } 
     //input-box
     .input-box {
+        display: block;
+        margin: 5px;
+        border: 1px solid darken($color-primary, 5%);
+        padding: 10px;
+        background: $color-primary;
+        border-radius: 5px;
+        color: $inzu-text;
         &.gray{
-            background: #E5E5E5;
+            background: darken($color-primary, 5%);
         }
         input, textarea {
             border: none;
@@ -158,16 +164,9 @@
             width: 100%;
             display: block;
         }
-        display: block;
-        margin: 5px;
-        border: 1px solid #eee;
-        padding: 10px;
-        background: #fff;
-        border-radius: 5px;
-        color: #666;
         &:focus-within {
-            border-color: #ffb400;
-            box-shadow: 0px 0px 10px #eee;
+            border-color: $color-two;
+            box-shadow: 0px 0px 10px darken($color-primary, 5%);
             @include transition();
         }
         //Pour les champs avec icône
@@ -181,7 +180,7 @@
             button{
                 background: transparent;
                 border: none;
-                color: #666;
+                color: $inzu-text;
             }
         }
     }
@@ -205,12 +204,12 @@
                 border-radius: 100%;
             }
             &::before{
-                border: 2px solid #ccc;
-                background: #fafafa;
+                border: 2px solid darken($color-primary, 10%);
+                background: darken($color-primary, 3%);
             }
         }
         &:checked + label::before{
-            border: 4px solid #ffb400;
+            border: 4px solid $color-two;
         }
     }
     //checkbox input
@@ -232,14 +231,14 @@
             width: 100%;
             height: 100%;
             background: transparent;
-            border: 2px solid #eee;
+            border: 2px solid darken($color-primary, 5%);
             border-radius: 3px;
             transition: .5s;
         }
         &:checked::before{
-            background: #008cff;
-            border: 2px solid #008cff;
-            box-shadow: 0px 3px 5px #eee;
+            background: $color-one;
+            border: 2px solid $color-one;
+            box-shadow: 0px 3px 5px darken($color-primary, 5%);
             line-height: 1em;
         }
     }
@@ -254,24 +253,24 @@
         width: 100%;
         button{
             display: block;
-            background: #e5e5e5;
+            background: darken($color-primary, 7%);
             border: none;
             width: 25px;
             height: 25px;
             transition: .5s;
             font-size: smaller;
-            color: #a0a0a0;
+            color: $inzu-text;
             &:disabled{
                 opacity: 0.5;
             }
         }
         button:not(:disabled){
             &:hover{
-                background: #ddd;
+                background: darken($color-primary, 15%);
             }
         }
         input{
-            border: 1px solid #eee;
+            border: 1px solid darken($color-primary, 5%);
             text-align: center;
             width: 100%;
             height: 100%;
@@ -280,18 +279,33 @@
     //Header
     header {
         nav{
+            box-shadow: 0px 0px 10px $color-shadow ;
             a{
-                color: #fff;
-            }
-            &.navbar-light{
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.075) ;
-                .nav-link a{
-                    color: #666 !important;
+                position: relative;
+                color: $inzu-text !important;
+                &.nav-link{
+                    &::after{
+                        content: " ";
+                        display: block;
+                        position: absolute;
+                        width: 0;
+                        margin: 5px 0;
+                        border-top: 2px solid transparentize($inzu-text, .7);
+                        @include transition();
+                    }
                 }
-                .nav-item{
-                    &:hover,
-                    &.active {
-                        background-color: rgba(8, 8, 8, 0.055);
+                &:hover::after{
+                    width: 40%;
+                }
+            }
+            &.navbar-dark{
+                box-shadow: none ;
+                a{
+                    color: $color-primary !important;
+                }
+                .nav-link {
+                    &::after{
+                        border-top-color: transparentize($color-primary, .7);
                     }
                 }
             }
@@ -306,14 +320,15 @@
                 padding: 3px 10px;
                 margin: 0 10px;
                 @include transition();
-                &:hover,
-                &.active {
-                    background-color: rgba(255, 255, 255, .3);
-                    border-radius: 50px;
+                .nav-item{
+                    &:hover,
+                    &.active {
+                       font-weight: bold
+                    }
                 }
             }
             .navbar-toggler {
-                color: #fff !important;
+                color: $color-primary !important;
                 border: none;
             }
             .navbar-button {
@@ -325,28 +340,28 @@
                     display: grid;
                     grid-template-columns: 30px 1fr;
                     border-radius: 200px;
-                    background: #fff;
+                    background: $color-primary;
                     padding: 5px;
                     font-size: 14px;
                     @include transition();
                     &:hover {
-                        background: #2b8af7;
-                        color: #fff;
+                        background: $color-one;
+                        color: $color-primary;
                         .i {
-                            background: #fff;
-                            color: #2b8af7;
+                            background: $color-primary;
+                            color: $color-one;
                         }
                     }
                 }
                 .i {
                     width: 30px;
                     height: 30px;
-                    background: #2b8af7;
+                    background: $color-one;
                     border-radius: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    color: white;
+                    color: $color-primary;
                 }
                 span.text {
                     margin: auto;
@@ -361,7 +376,7 @@
                 justify-self: end;
                 a,
                 button {
-                    color: #fff;
+                    color: $color-primary;
                 }
                 span {
                     margin: 0 10px;
@@ -374,11 +389,11 @@
         padding: 0 10px;
         .link{
             display: block;
-            border: 1px solid #f5f5f5;
+            border: 1px solid darken($color-primary, 4%);
             @include transition;
             &:hover{
-                box-shadow: 0px 3px 10px 1px #f0f0f0;
-                border-color: #ffb400;
+                box-shadow: 0px 3px 10px 1px lighten($color-shadow, 10%);
+                border-color: $color-two;
             }
         }
         .item-info {
@@ -403,7 +418,7 @@
                 }
             }
             .price{
-                color: #008cff;
+                color: $color-one;
                 right: 10px;
                 bottom: 20px;
                 margin: 10px 5px;
@@ -416,7 +431,7 @@
             .short-info{
                 display: block;
                 padding: 10px 0;
-                border-bottom: 1px solid #eee;
+                border-bottom: 1px solid darken($color-primary, 5%);
                 font-size: .9em;
                 ul {
                     display: flex;
@@ -424,13 +439,13 @@
                 }
                 .more-info-shower{
                     border: none;
-                    color: #666;
+                    color: $inzu-text;
                 }
             }
             .more-info{
                 display: inline-block;
                 padding: 10px 0;
-                background: #fafafa;
+                background: darken($color-primary, 3%);
                 ul{
                     li{
                         &:before {
@@ -438,7 +453,7 @@
                             content: "•";
                             margin: 0 5px;
                             font-size: .7em;
-                            color: #ccc;
+                            color: darken($color-primary, 10%);
                         }
                     }
                 }
@@ -456,8 +471,8 @@
     }
     footer{
         min-height: 300px;
-        background: #fafafa;
-        border-top: 1px solid #ccc;
+        background: darken($color-primary, 3%);
+        border-top: 1px solid darken($color-primary, 10%);
         .footer-container{
            .body{
                display: grid;
@@ -470,7 +485,7 @@
                 }
                 .link-item{
                     a{
-                        color: #666;
+                        color: $inzu-text;
                     }
                     margin: 5px 0;
                 }
@@ -479,7 +494,7 @@
            .feet{
                display: flex;
                justify-content: space-between;
-                border-top: 1px solid #ccc;
+                border-top: 1px solid darken($color-primary, 10%);
            }
            .social-links-list{
                li{
@@ -493,7 +508,7 @@
     
     @media (max-width: 992px) {
         nav { 
-            background-color: rgba(0, 0, 0, 0.329);
+            background-color: $color-shadow;
             backdrop-filter: blur(5px);
             .nav-item{
                 margin: 5px 0 !important;
@@ -505,7 +520,7 @@
             }
             &.navbar-light{
                 .mobile-btn-container button{
-                    color: #666 !important;
+                    color: $inzu-text !important;
                 }
             }
         }

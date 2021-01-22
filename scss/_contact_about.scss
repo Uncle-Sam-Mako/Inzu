@@ -2,8 +2,8 @@
 
 .contact-page-content, .about-page-content{
     .head-title{
-        background: #ffb400;
-        color: #fff;
+        background: $color-two;
+        color: $color-primary;
         padding: 7px 10px;
         border-radius: 5px;
     }
@@ -20,7 +20,7 @@
             background: transparent;
             @include transition();
             &:hover, &.active{
-                background: #eee;
+                background: darken($color-primary, 5%);
             }
             a{
                 display: block;

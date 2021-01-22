@@ -1,4 +1,14 @@
 /*-------------Variables------------------*/
+
+/*colors*/
+
+$color-one : #2b8af7;
+$color-two : #ffb400;
+$inzu-text : #666;
+$color-primary : #fff;
+$color-shadow : rgba(0, 0, 0, 0.151);
+
+/*------*/
 @font-face{
     src: url('../font/FontsFree-Net-SFProDisplay-Regular.ttf');
     font-family: 'font-wow';
@@ -16,7 +26,7 @@ $font-fourth: 'Work Sans', sans-serif;
 
 /*------------Mixins---------------------*/
 
-@mixin transition {
+@mixin transition() {
     transition: all ease .6s;
 }
 
