@@ -56,9 +56,7 @@
                 width: 49%;
                 margin: auto;
                 .check{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include flex(center, center);
                     position: absolute;
                     top: 0px;
                     left: 5px;
@@ -100,9 +98,7 @@
     #last-step{
         .loader-input-list{
             li{
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include flex(center, center);
                 flex-direction: column;
                 padding: 0;
                 margin: 5px 0;
@@ -120,9 +116,7 @@
                     position: absolute;
                     top: 0;
                     left: 0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    @include flex(center, center);
                     text-align: center;
                     width: 100%;
                     height: 100%;
@@ -170,11 +164,9 @@
     }
     #finished{
        .flex-bloc{
-           display: flex;
-           justify-content: center;
-           align-items: center;
+            @include flex(center, center);
             min-height: 300px;
-       }
+        }
         .text{
             text-align: center;
             p{

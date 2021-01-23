@@ -11,42 +11,13 @@
     @import './add_house';
     @import './multi-steps-form';
     /*----------------------------------------*/
-    /*-----------Import---fonts---------*/
-    @font-face {
-        font-family: 'Proxima Nova Alt Rg';
-        src: url('../font/ProximaNovaA-Regular.woff2') format('woff2'),
-            url('../font/ProximaNovaA-Regular.woff') format('woff'),
-            url('../font/ProximaNovaA-Regular.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-    }
-    
-    @font-face {
-        font-family: 'Proxima Nova Rg';
-        src: url('../font/ProximaNova-Regular.woff2') format('woff2'),
-            url('../font/ProximaNova-Regular.woff') format('woff'),
-            url('../font/ProximaNova-Regular.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-    }
-    
-
-    
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-    @import url('https://db.onlinewebfonts.com/c/0b51833ff62e4af8acb5fd3e2bf59e97?family=SF+Pro+Display');
-
-    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
-    /*---------------------------------*/
     
     html,
     body {
         font-size: 15px;
         color: $inzu-text;
         height: 100%;
-        font-family: 'Proxima Nova Rg' !important;
+        font-family: $font-primary !important;
     }
     a,
     a:hover,
@@ -67,7 +38,7 @@
             padding: 0 2px;
         }
         &::-webkit-scrollbar-thumb {
-            background: #aaa; 
+            background: darken($color-primary, 25%); 
             border-radius: 10px;
         }
     }
@@ -85,7 +56,7 @@
         border: 1px solid darken($color-primary, 5%);
         border-radius: 10px;
         padding: 20px 35px;
-        box-shadow: 0px 0px 20px #f3f3f3;
+        box-shadow: 0px 0px 20px lighten($color-shadow, 60%);
         margin: auto;
     }
     .full-w{
@@ -114,7 +85,7 @@
             }
         }
         &.btn-blind {
-            background: linear-gradient($color-two, mix($color-two, red, 70%));
+            background: linear-gradient($color-two, mix($color-two, red, 80%));
             color: $color-primary;
             font-weight: bold;
             display: block;
@@ -358,9 +329,9 @@
                     height: 30px;
                     background: $color-one;
                     border-radius: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    display: grid;
+                    text-align: center;
+                    place-items: center;
                     color: $color-primary;
                 }
                 span.text {
@@ -369,8 +340,7 @@
                 }
             }
             .mobile-btn-container {
-                display: flex;
-                align-items: center;
+                @include flex(initial, center)
             }
             .mobile-nav-btn {
                 justify-self: end;
@@ -434,8 +404,7 @@
                 border-bottom: 1px solid darken($color-primary, 5%);
                 font-size: .9em;
                 ul {
-                    display: flex;
-                    justify-content: space-between;
+                    @include flex(space-between, initial);
                 }
                 .more-info-shower{
                     border: none;
@@ -492,8 +461,7 @@
             }
            }
            .feet{
-               display: flex;
-               justify-content: space-between;
+                @include flex(space-between, initial);
                 border-top: 1px solid darken($color-primary, 10%);
            }
            .social-links-list{

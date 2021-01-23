@@ -18,12 +18,10 @@
         .nav-link{
             border-radius: 5px;
             background: transparent;
+            color: $inzu-text;
             @include transition();
             &:hover, &.active{
-                background: darken($color-primary, 5%);
-            }
-            a{
-                display: block;
+                background: darken($color-primary, 8%);
             }
         }
     }

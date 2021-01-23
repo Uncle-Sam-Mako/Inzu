@@ -78,7 +78,7 @@ hr {
    */
 
 pre {
-    font-family: monospace, monospace;
+    font-: monospace, monospace;
     /* 1 */
     font-size: 1em;
     /* 2 */
@@ -131,7 +131,7 @@ strong {
 code,
 kbd,
 samp {
-    font-family: monospace, monospace;
+    font-: monospace, monospace;
     /* 1 */
     font-size: 1em;
     /* 2 */
@@ -438,6 +438,6 @@ img, svg {
 ul{
     padding: 0;
 }
-input, textarea{
-    color: #666;
+html, button, p, div, input, textarea{
+    color: $inzu-text;
 }

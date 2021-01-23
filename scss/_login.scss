@@ -41,18 +41,19 @@
 
 .connection-options-1{
     .btn{
-        border: 2px solid #c9c9c9;
+        border: 2px solid darken($color-primary, 15%);
+        color: $inzu-text;
         @include transition();
-        color: #666;
         img{
             width: 15px;
+            vertical-align: sub;
         }
-        i{
+        &.facebook-btn i{
             color: #3b5998;
         }
         &:hover{
-            border-color: #0a91df;
-            background: #008cff1a;
+            border-color: $color-one;
+            background: mix($color-primary, $color-one, 90%);
         }
     }
 }
