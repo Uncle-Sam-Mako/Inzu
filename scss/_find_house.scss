@@ -10,13 +10,12 @@
     align-items: center;
     .filter-list{
         margin: 0;
-        display: flex;
-        justify-content: space-around;
+        @include flex(flex-start, initial);
        & > li{
             display: inline-block;
             position: relative;
             margin-right: 3px;
-            button{
+            button:not(.submit-btn){
                 width: 100%;
                 display: block;
                 background: $color-primary;
@@ -33,6 +32,21 @@
                     color: $color-primary;
                 }
             }
+            .submit-btn-container{
+                background: darken($color-primary, 5%);
+                padding: 5px 10px;
+                margin-top: 7px;
+                .submit-btn{
+                    display: block;
+                    border: none;
+                    border-radius: 5px;
+                    background: $color-one;
+                    color: $color-primary;
+                    width: 60px;
+                    height: 30px;
+                    margin-left: auto;
+                }
+            }
             @keyframes fadeIn {
                 from{
                     transform: scale(0.5,0.5);
@@ -46,13 +60,13 @@
             .popup{
                 position: absolute;
                 z-index: 9;
-                min-width: 300px;
+                min-width: 350px;
                 background: $color-primary;
                 border-radius: 10px;
                 box-shadow: 0 0 10px 1px $color-shadow;
-                padding: 10px;
                 opacity: 1;
                 animation: fadeIn 0.3s ease-in;
+                overflow: hidden;
                 &--type li{
                     display: block;
                     margin: 10px 0;
@@ -64,6 +78,9 @@
                     ul{
                         display: flex;
                         flex-wrap: nowrap;
+                        li{
+                            flex-basis: calc(100% / 6);
+                        }
                     }
                     label{
                         min-width: 50px;

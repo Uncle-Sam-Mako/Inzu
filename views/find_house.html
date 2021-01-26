@@ -73,8 +73,8 @@
                             <li class="filter-item house-type-filter">
                                 <button data-popup="#house-type-popup" id="type-filter" class="openPopup">Type</button>
                                 <div class="popup popup--type" id="house-type-popup" data-hidden=true>
-                                   <form action="#">
-                                       <ul>
+                                    <div class="input-box-container px-2">
+                                        <ul>
                                             <li>
                                                 <span>
                                                     <input type="radio" class="radio-wow" id="all" name="type" value="all">
@@ -99,60 +99,69 @@
                                                     <label for="villa">Villa</label>
                                                 </span>
                                             </li>
-                                       </ul>
-                                   </form>
+                                        </ul>
+                                    </div>
+                                    <div class="submit-btn-container">
+                                        <button class="submit-btn">ok</button>
+                                    </div>
                                 </div>
                             </li>
                             <li class="filter-item house-price-filter">
                                 <button data-popup="#house-price-popup" id="price-filter" class="openPopup">Prix</button>
                                 <div class="popup popup--price" id="house-price-popup" data-hidden=true>
-                                    <form action="#" class="d-flex">
+                                    <div class="input-box-container">
                                         <span class="input-box">
                                             <input type="number" name="price" min="100" id="min-price" placeholder="Min($)">
                                         </span>
                                         <span class="input-box">
                                             <input type="number" name="price" min="100" id="max-price" placeholder="Max($)">
                                         </span>
-                                    </form>
+                                    </div>
+                                    <div class="submit-btn-container">
+                                        <button class="submit-btn">ok</button>
+                                    </div>
                                 </div>
                             </li>
                             <li class="filter-item house-area-filter">
                                 <button data-popup="#house-area-popup" id="area-filter" class="openPopup">Surface</button>
                                 <div class="popup popup--surface" id="house-area-popup" data-hidden=true>
-                                    <form action="#" class="d-flex">
+                                    <div class="input-box-container">
                                         <span class="input-box">
                                             <input type="number" name="area" min="100" id="min-area" placeholder="Min(m²)">
                                         </span>
                                         <span class="input-box">
                                             <input type="number" name="area" min="100" id="max-area" placeholder="Max(m²)">
                                         </span>
-                                    </form>
+                                    </div>
+                                    <div class="submit-btn-container">
+                                        <button class="submit-btn">ok</button>
+                                    </div>
                                 </div>
                             </li>
                             <li class="filter-item house-beds-filter">
                                 <button data-popup="#house-beds-popup" id="beds-filter" class="openPopup">Chambres</button>
                                 <div class="popup popup--beds" id="house-beds-popup" data-hidden=true>
-                                    <form action="#">
+                                    <div class="input-box-container p-2">
                                         <ul>
-                                             <li>
-                                                 <span>
-                                                     <input type="radio" class="" id="studio" name="beds" value=0>
-                                                     <label for="studio">Studio</label>
-                                                 </span>
-                                             </li>
-                                             <li>
-                                                 <span>
-                                                     <input type="radio" class="" id="one_bed" name="beds" value=1>
-                                                     <label for="one_bed">1</label>
-                                                 </span>
-                                             </li>
-                                             <li>
-                                                 <span>
-                                                     <input type="radio" class="" id="two_beds" name="beds" value=2>
-                                                     <label for="two_beds">2</label>
-                                                 </span>
-                                             </li>
-                                             <li>
+                                            <li>
+                                                <span>
+                                                    <input type="radio" class="" id="studio" name="beds" value=0>
+                                                    <label for="studio">Studio</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <input type="radio" class="" id="one_bed" name="beds" value=1>
+                                                    <label for="one_bed">1</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <input type="radio" class="" id="two_beds" name="beds" value=2>
+                                                    <label for="two_beds">2</label>
+                                                </span>
+                                            </li>
+                                            <li>
                                                 <span>
                                                     <input type="radio" class="" id="three_beds" name="beds" value=3>
                                                     <label for="three_beds">3</label>
@@ -171,11 +180,11 @@
                                                 </span>
                                             </li>
                                         </ul>
-                                    </form>
+                                    </div>
                                  </div>
                             </li>
                             <li class="filter-action-btn more-filter-btn">
-                                <button  data-modal="#modal1" class="js-modal-open">Plus</button>
+                                <button data-modal="#modal1" class="js-modal-open">Plus</button>
                             </li>
                             <li class="filter-action-btn invisible-md mobile-filter-btn">
                                 <button data-modal="#modal1" class="js-modal-open"><i class="fas fa-filter"></i> Filtres</button>
@@ -740,17 +749,5 @@
     <script src="../js/main.js"></script>
     <script src="../js/carousel.js"></script>
     <script src="../modal/dist/js/medea.js"></script>
-    <script>
-        // let boxInfo = null;
-        // document.querySelectorAll(".more-info-shower").forEach(a => {
-        //     a.addEventListener('click', showInfo);
-        // })
-        // const showInfo = function(e){
-        //     e.preventDefault();
-        //     boxInfo = document.querySelector(e.target.getAttribute('href'));
-        //     boxInfo.style.display = "block";
-        // }
-        
-    </script>
-    </body>
-    </html>
+</body>
+</html>
