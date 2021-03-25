@@ -106,7 +106,8 @@ header {
 }
 .announce-banner{
     min-height: 400px;
-    background-size: cover;
+    padding: 15px 10px;
+    background: #091e48;
     @include flex(center, center);
     img{
         border-radius: 10px;
@@ -120,9 +121,10 @@ header {
         h4{
             font-weight: 900;
             margin-bottom: 10px;
+            color: $color-primary;
         }
         p{
-            
+            color: darken($color: $color-primary, $amount: 20%);
         }
     }
 }
