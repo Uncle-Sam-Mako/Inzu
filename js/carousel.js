@@ -31,10 +31,11 @@ let houseSlider = $(function(){
         breakpoints: {
             height: '8rem',
             767: {
+                arrows: true,
                 perPage: 1,
             },
             992: {
-                perPage: 2,
+                perPage: 3,
             }
         }
     }).mount();
