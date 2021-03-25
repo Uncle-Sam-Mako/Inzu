@@ -356,11 +356,13 @@
     }
     
     .house-item {
-        padding: 0 10px;
+        padding: 20px 10px;
         .link{
             display: block;
-            border: 1px solid darken($color-primary, 4%);
+            box-shadow: 0px 2px 20px -5px $color-shadow;
             background: $color-primary;
+            border-radius: 10px;
+            overflow: hidden;
             @include transition;
             &:hover{
                 box-shadow: 0px 3px 10px 1px lighten($color-shadow, 10%);
@@ -371,7 +373,7 @@
             padding: 10px 15px;
             position: relative;
             display: grid;
-            grid-template-rows: 1fr 40px;
+            grid-template-rows: 1fr max-content;
             h6 {
                 span {
                     display: inline-block;
@@ -388,21 +390,30 @@
                     }
                 }
             }
+            .house-description{
+                padding: 5px;
+                display: block;
+                p{
+                    color: lighten($color: $inzu-text, $amount: 20%);
+                    font-size: small;
+                    margin: 0;
+                }
+            }
             .price{
-                color: $color-one;
-                right: 10px;
-                bottom: 20px;
+                color: $color-primary;
                 margin: 10px 5px;
-                
+                background: #05c566;
+                display: block;
+                padding: 3px 10px;
+                border-radius: 5px;
                 font:{
-                    size: 20px;
+                    size: medium;
                     weight: bolder;
                 }
             }
             .short-info{
                 display: block;
-                padding: 10px 0;
-                border-bottom: 1px solid darken($color-primary, 5%);
+                padding: 0 5px;
                 font-size: .9em;
                 ul {
                     @include flex(space-between, initial);
@@ -410,22 +421,6 @@
                 .more-info-shower{
                     border: none;
                     color: $inzu-text;
-                }
-            }
-            .more-info{
-                display: inline-block;
-                padding: 10px 0;
-                background: darken($color-primary, 3%);
-                ul{
-                    li{
-                        &:before {
-                            display: inline-block;
-                            content: "•";
-                            margin: 0 5px;
-                            font-size: .7em;
-                            color: darken($color-primary, 10%);
-                        }
-                    }
                 }
             }
         }

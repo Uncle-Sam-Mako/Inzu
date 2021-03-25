@@ -30,6 +30,9 @@ let houseSlider = $(function(){
         lazyLoad: 'nearby',
         breakpoints: {
             height: '8rem',
+            767: {
+                perPage: 1,
+            },
             992: {
                 perPage: 2,
             }
