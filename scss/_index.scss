@@ -23,9 +23,30 @@ header {
     }
 }
 
+.index-main-section.container-fluid{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.town-banner{
+    margin: auto -15px ;
+}
 #town-slider {
-    .slide-img img {
-        border-radius: 25px; 
+    .slide-img{
+        position: relative;
+        display: block;
+        &::before{
+            position: absolute;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        }
+        img{
+            border-radius: 25px; 
+        }
     }
     .slide-text{
         position: absolute;
@@ -52,20 +73,6 @@ header {
     }
     .town-item{
         position: relative;
-        .slide-img{
-            position: relative;
-            display: block;
-            margin: 20px 0;
-            &::before{
-                position: absolute;
-                content: "";
-                display: block;
-                width: 100%;
-                height: 100%;
-                border-radius: 25px;
-                background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-            }
-        }
     }
 }
 

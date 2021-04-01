@@ -4,17 +4,32 @@
 let townSlider = $(function(){
     new Splide('#town-slider', {
         perPage: 4,
-        cover: true,
+        //cover: true,
         arrows: false,
         pagination: false,
         lazyLoad: 'nearby',
         breakpoints: {
             height: '8rem',
+            480: {
+                perPage: 1,
+                padding: {
+                    left : 0,
+                    right : '3rem',
+                },
+            },
             767: {
                 perPage: 2,
+                padding: {
+                    left : 0,
+                    right : '3rem',
+                },
             },
             992: {
                 perPage: 3,
+                padding: {
+                    left : 0,
+                    right : '3rem',
+                },
             }
         }
     }).mount();
@@ -33,6 +48,10 @@ let houseSlider = $(function(){
             767: {
                 arrows: true,
                 perPage: 1,
+                padding: {
+                    left : 0,
+                    right : '3rem',
+                },
             },
             992: {
                 perPage: 3,
